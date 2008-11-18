@@ -1,0 +1,122 @@
+# Process this file with autoconf to produce a configure script.
+AC_INIT(ide/IDEMain.cpp)
+PACKAGE=zoinks
+
+dnl version number
+MAJOR_VERSION=0
+MINOR_VERSION=4
+MICRO_VERSION=2
+EXTRA_VERSION=
+VERSION=$MAJOR_VERSION.$MINOR_VERSION.$MICRO_VERSION$EXTRA_VERSION
+
+
+AM_INIT_AUTOMAKE($PACKAGE, $VERSION, no-define)
+AC_DEFINE_UNQUOTED(PACKAGE, "$PACKAGE")
+AC_DEFINE_UNQUOTED(VERSION, "$VERSION")
+
+AM_CONFIG_HEADER(config.h)
+
+# disable automatic bootstrapping
+AM_MAINTAINER_MODE
+
+AC_CANONICAL_HOST
+
+# Checks for programs.
+AC_PROG_CC
+AC_PROG_CPP
+AC_PROG_CXX
+AC_PROG_RANLIB
+
+# for gettext
+ALL_LINGUAS="ja es"
+AM_GNU_GETTEXT([external])
+
+
+localedir='${datadir}/locale'
+AC_SUBST(localedir)
+
+# Checks for typedefs, structures, and compiler characteristics.
+AC_C_CONST
+AC_C_INLINE
+AC_TYPE_PID_T
+AC_HEADER_TIME
+
+AC_C_BIGENDIAN
+
+# Checks for header files.
+AC_HEADER_DIRENT
+AC_CHECK_HEADERS([errno.h fcntl.h inttypes.h stddef.h stdlib.h string.h sys/time.h sys/shm.h sys/ipc.h netinet/in.h])
+
+AC_MSG_CHECKING([for in_addr_t])
+AC_TRY_COMPILE([#include <sys/types.h>
+#if STDC_HEADERS
+#include <stdlib.h>
+#include <stddef.h>
+#endif
+#if HAVE_NETINET_IN_H
+#include <netinet/in.h>
+#endif], [in_addr_t foo;],
+  [AC_DEFINE([HAVE_IN_ADDR_T])
+   AC_MSG_RESULT(yes)],
+  [AC_MSG_RESULT(no)])
+
+# Checks for X11
+AC_PATH_XTRA
+
+if test "x$x_includes" != x; then
+MY_CXXFLAGS="-g -Werror -Wall -I$x_includes"
+else
+MY_CXXFLAGS="-g -Werror -Wall"
+fi
+AC_SUBST(MY_CXXFLAGS)
+
+if test $no_x; then
+    AC_MSG_ERROR([The path for the X11 files not found!
+Make sure you have X and it's headers and libraries (the -devel packages
+in Linux) installed.])
+fi
+
+if test "x$x_libraries" != x; then
+	X_LIBRARY_PATH=-L$x_libraries
+fi
+AC_SUBST(X_LIBRARY_PATH)
+
+# Checks for libraries.
+AC_CHECK_LIB(X11, XOpenDisplay,, 
+  AC_MSG_ERROR([*** libX11 not found. Check 'config.log' for more details.]),
+  $X_LIBRARY_PATH)
+
+AC_CHECK_LIB(Xpm, XpmCreatePixmapFromData,, 
+  AC_MSG_ERROR([*** libXpm not found. Check 'config.log' for more details.]),
+  $X_LIBRARY_PATH)
+
+AC_CHECK_LIB(Xext, XShmPutImage, [AC_DEFINE(HAVE_XSHM)
+ 				  have_xext=yes
+ 				  X_LIBRARY_PATH="$X_LIBRARY_PATH -lXext"],,
+  $X_LIBRARY_PATH)
+
+# Use Imlib by default
+
+AC_ARG_WITH(imlib, [  --disable-imlib    disable Imlib support (used for computing width and height for <img> tags) ],[enable_imlib=no])
+if test "x$enable_imlib" != xno; then
+	  
+	if test x$have_xext = xyes; then
+		AC_CHECK_LIB(Imlib, Imlib_init,, 
+			AC_MSG_WARN([*** libImlib not found. Some image related features will be disabled.]),
+			$X_LIBRARY_PATH)
+	else	
+	 	 AC_MSG_WARN([*** libXext not found. libXext is required by libImlib. Some image related features will be disabled.])
+	 fi
+fi
+
+
+MY_SUBDIRS="fw ide"
+IDE_LDADD="../fw/libfw.a"
+
+AC_SUBST(MY_SUBDIRS)
+AC_SUBST(IDE_LDADD)
+
+# Checks for library functions.
+# AC_CHECK_FUNCS([strcasecmp])
+
+AC_OUTPUT(Makefile fw/Makefile ide/Makefile po/Makefile.in po/Makefile m4/Makefile )

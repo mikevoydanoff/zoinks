@@ -1,0 +1,44 @@
+Zoinks is Copyright (c) 2001-2008 by Mike Lockwood
+All rights reserved.
+
+
+Zoinks is a text editor and IDE for Unix/X11 platforms.  There is also an integrated source level debugger
+under development (not included in this distribution).  Zoinks also has some support for HTML editing.
+
+For more information, or to download the latest version of Zoinks, see the Zoinks web site at http://zoinks.mikelockwood.com.
+See the ChangeLog file for the latest changes.
+
+
+Licensing & Distribution:
+
+Zoinks is released under the GNU General Public License (GPL).  See the file COPYING in this directory for details.
+
+
+Requirements:
+
+Zoinks builds on Unix/Posix platforms (Linux, BSD, etc).  To build zoinks you need to have X11 and the libXPM library.
+Virtually any Linux distribution should have this.  libXPM might need to be installed on other platforms.
+
+Zoinks also uses Imlib as an option.  Imlib is used to autmatically calculate the width and height of images when using the
+"Insert Image" command for inserting HTML "<img>" tags.  Imlib support can be disabled using the "configure --disable-imlib" option.
+
+Zoinks uses the GNU gettext for localization support.  If you have trouble building and you do not need a localized
+version of Zoinks, try the "configure --disable-nls" option.
+
+To build zoinks, do the usual:
+
+	./configure
+	make
+
+The program will be built as ide/zoinks
+
+Optionally:
+
+	make install
+
+will install zoinks as /usr/local/bin/zoinks (unless you pass a different --prefix option to configure).
+
+
+Mike Lockwood
+mike@mikelockwood.com
+http://zoinks.mikelockwood.com

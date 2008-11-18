@@ -1,0 +1,16 @@
+*.o
+*.a
+Makefile
+.deps
+config.cache
+config.h
+config.log
+config.status
+ide/zoinks
+po/POTFILES
+po/remove-potcdate.sed
+po/stamp-po
+stamp-h
+stamp-h1
+autom4te.cache
+zoinks.proj

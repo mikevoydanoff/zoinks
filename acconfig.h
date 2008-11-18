@@ -1,0 +1,22 @@
+#undef ENABLE_DEBUGGER
+
+#undef HAVE_CPU_M68K
+#undef HAVE_CPU_POWERPC
+#undef HAVE_CPU_X86
+
+#undef HAVE_ELF_H
+#undef HAVE_MACH_O_LOADER_H
+
+#undef ENABLE_NLS
+
+#undef HAVE_CATGETS
+#undef HAVE_GETTEXT
+#undef HAVE_LC_MESSAGES
+#undef HAVE_STPCPY
+
+#undef PACKAGE
+#undef VERSION
+
+#undef HAVE_IN_ADDR_T
+
+#undef HAVE_XSHM

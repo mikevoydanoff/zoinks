@@ -1,0 +1,3 @@
+#!/bin/bash
+
+./configure --x-includes=/usr/include --x-libraries=/usr/X11R6 --disable-nls

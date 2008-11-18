@@ -1,0 +1,297 @@
+Version 0.4.2 (November 18, 2008)
+
+	- Ignore CVS, .svn and .git directories and python .pyc files in directory compare.
+	- Fixed a race condition that caused an error in XSetInputFocus().
+	- Added a SpacesPerTab option (to ~/.zoinks) to allow inserting spaces for tabs instead of ASCII tab character.
+	- Shift-Tab can be used to insert a tab character if SpacesPerTab is set.
+	- Allow setting SpacesPerTab differently based on file extension.  
+	  For example, SpacesPerTab.py=2 will set tab to two spaces for python files.
+	- Launching zoinks as "zoinksdiff" is equivalent to "zoinks -d"
+	- Fixed some problems editing very large files.
+	- Support for double clicking on Python error messages in the build output.
+	- Python syntax hilighting.
+	- Fixed a TList assertion handling arrow keys in the open file dialog.
+	- Regenerate configure script with new automake and autoconf to fix configuration step on Ubuntu.
+
+Version 0.4.1 (October 31, 2006)
+
+	- Zoinks now sorts files and directories in the directory compare tree view.
+	- Added key type select to directory compare window.
+	- Do not create an empty file if a non-existing file name is entered in the compare files dialog.
+	- Fixed a crash in the open file dialog that occured when attempting to enter a directory for which you do not have access.
+	- Fixed some asserts that happened occasionally due to mismatched mouse events.
+	- Fixed some problems building with Cygwin and newer versions of gcc.
+
+Version 0.4.0 (April 2, 2005)
+
+	- Added Spanish locale support (submitted by Martin)
+	- Added option for enabling line wrap by default (DefaultLineWrap=true to ~/.zoinks)
+	- Fix configure script for systems with X headers in /usr/include/X11 (instead of the usual /usr/X11R6/include/X11).
+
+Version 0.3.9 (March 23, 2005)
+
+	- Sped up drag select scrolling.
+	- Fix problem parsing paths in error messages from Java compiler.
+	- Improved TeX syntax hiliting.
+	- Ignore class files in directory comparison.
+	- Fix configure script for systems with libX11 in /usr/lib (patch from Marius Mauch).
+	- Switched to newer automake and autoconf.
+	- Added item to HTML menu for inserting <div> tags.
+	- Added item to HTML tag popup menus for setting style attributes.
+
+Version 0.3.8 (January 31, 2004)
+
+	- Added popup buttons in "Compare File" dialogs to select files to compare from currently open windows.
+	- Added -man command line option for displaying man pages. (example: "zoinks -man xterm" to display xterm man page).
+	  You can add "alias man='zoinks -man'" to your .bashrc if you want to use zoinks for displaying man pages by default.
+	- Fixed problem scrolling bottom pane of compare files window.
+	- Double clicking in the Build Output window will select a single word if a filename/line number can not be parsed.
+	- Updated to newer version of gettext.
+
+Version 0.3.7 (October 19, 2003)
+
+	- Fixed crash that occured when displaying long file paths in dialogs.
+	- Add support for double clicking on latex compiler errors in LaTeX Output window.
+	- Add "Generate PDF" menu item to the TeX menu.
+
+Version 0.3.6 (August 29, 2003)
+
+	- Don't change window focus after displaying the "file has been modified by a different program" dialog.
+	- Associate the Project menu items with the Build Output window with the correct project.
+	- Fix problem forward deleting the last character in a file with the "Delete" key.
+	- Left and right arrow keys expand and collapse nodes in a tree view (for example, the directory compare view).
+	- Added "Copy All Changes to Left" and "Copy All Changes to Right" menu items to "Compare" menu in file compare window.
+	- Fixed infinite loop in syntax hiliting code that occured when editing Ruby source files.
+
+
+Version 0.3.5 (July 22, 2003)
+
+	- Include project name in Build Output window title.
+	- When comparing files, use same syntax hiliting settings for both files if language of one file can not be determined.
+	  This works well when using zoinks as a diff tool for Perforce.
+	- Set target to difference list view after recalculating file differences.
+	- Fix "Stop Make" command to immediately stop reading stdout and stderr from build.
+
+Version 0.3.4 (May 25, 2003)
+
+	- Syntax hiliting for Ruby source files (thanks to Gabriel Emerson).
+	- Fix some problems with keyboard selecting in the open file dialog that were accidentally introduced in 0.3.2.
+
+Version 0.3.3 (May 15, 2003)
+
+	Added new file/directory diff feature:
+	
+	The "Compare Files..." menu item in the "File" menu brings up a dialog for specifying which two files or directories you want to compare.
+	Files are compared side by side.  You can copy differences from one file to the other, and can edit within the files at the same time.
+	There is a menu item that allows you to recompute the differences between the files (which can be useful if you edit directly in one of the files).
+	Comparing directories gives you a tree view of the files that differ.  
+	Clicking on a file in the tree brings up a file compare window to allow you to merge the changes for that file.
+	
+	From the command line, you can type:
+		
+		zoinks -d <file1> <file2> 
+		
+	or:
+		zoinks -d <directory1> <directory2> 
+		
+	to compare two files or directories.  This can be used with source control systems
+	(for example, Perforce users can set P4DIFF to "zoinks -d" to use zoinks diff with Perforce).
+	
+	Also fixed:
+
+	- Fix focus problem when pasting text into a text field.
+	- Recognize "explicit" as a keyword for C++ syntax hiliting.
+	- Fix problem generating DVI for read-only TeX files.
+
+Version 0.3.2 (April 16, 2003)
+
+	- Add support for searching for a whole word in text windows.
+	- Recognize .hpp file extension as C++ for syntax hiliting purposes.
+	- Fix crash that occured in "Open File" dialog that occured when attempting to open a directory.
+	- Don't allow choosing multiple directories in the "Choose Directory" dialog.
+	- Don't allow opening both files and directories in the "Open File" dialog.
+	- Add support for handling "TARGETS" selection requests.  This fixes a problem pasting selection in RedHat 8.0.
+
+Version 0.3.1 (April 9, 2003)
+
+	- Improve interaction between zoinks and xdvi when displaying TeX files.
+	  Clicking the left mouse button in xdvi with the control key down will cause zoinks to display the corresponding line of TeX code.
+	- Add support for +<line number> command line option to specify line number to scroll to when opening a file
+	  (for example, type "zoinks +123 foo.txt" to open the file foo.txt and scroll to line 123)
+	- Fix crash that occured when selecting the "Wrap Lines" menu item on an empty file.
+	- Fix syntax hiliting problem with multi-line C macros.
+	- Fix problem with absolute build directory paths in the project window.
+
+Version 0.3.0 (March 26, 2003)
+
+	- Notify user if an open text file has been changed by another process.  Allow user to decide whether or not to reload the file.
+	
+Version 0.2.9 (March 9, 2003)
+
+	- Fixed syntax hiliting redraw problem that was introduced in version 0.2.8.
+
+
+Version 0.2.8 (February 28, 2003)
+
+	- Text window scrolling and syntax hiliting performance improvements.
+	- Updated to automake-1.5, autoconf-2.53 and gettext-0.11.5.
+	
+Version 0.2.7 (January 15, 2003)
+
+	- Fix problem with Functions menu that occured when quote characters were contained in comments.
+ 	- Removed the workaround for X server on MacOS X from 0.2.6, since it was causing problems on other systems.
+
+Version 0.2.6 (December 7, 2002)
+
+	- Refix window focus problem that occured when showing the find dialog while running the KDE window manager.  (originally fixed in 0.2.2, broke in 0.2.5).
+	- Fixed crash when attempting to use TeX support on a system without latex installed.
+	- Fixed a bug in syntax hiliting for TeX comments.
+	- Fixed a problem with type select in the file open and save dialogs that occured under Cygwin.
+ 	- Added workaround for X server on MacOS X that sets Mod2 bit instead of Mod1.
+ 
+Version 0.2.5 (November 7, 2002)
+
+	- Fixed problem displaying XPM pixmaps on indexed color displays.
+	- Fixed an X11 error that occured sometimes when running on a remote server due to calling XSetInputFocus on a window that was not yet visible.
+	- Fixed a redraw problem with the "Shift Left" and "Shift Right" commands that was introduced in version 0.2.4.
+	
+Version 0.2.4 (October 20, 2002)
+
+	- Add some features for editing TeX documents (not fully functional yet), including a TeX menu for inserting some TeX commands, syntax hiliting, 
+	  generating DVI files and previewing with xdvi.
+	- When saving a new document on top of an existing file, do not mark document as saved unless the document can be written successfully.
+	- Don't mark a text document as "dirty" if all changes since previous save have been undone.
+	- Don't enable the "Save All" menu item if no documents need saving.
+	- Fixed conversion of some nonstandard characters using the "Fix Special Characters" HTML menu command.
+	- Some text drawing optimizations to reduce flicker while typing.
+
+Version 0.2.3 (September 19, 2002)
+
+	- Fix bug in undo/redo support that resulted in the undo command scrambling the text in your document.
+	- Search open window list for matching file when using the Alt-Tab feature if the corresponding source/header file
+	  is not found in the same directory.
+	- Treat ".cc" files as C++ for syntax hiliting and the Alt-Tab feature.
+	- Fix some more problems with the Functions menu and K & R C code.
+
+Version 0.2.2 (August 13, 2002)
+
+	- Fix "Save Copy" command so it actually writes the file now.
+	- Fix crash that occured when double clicking on a "no newline at end of file" compiler warning.
+	- Fix window focus problem that occured when showing the find dialog while running the KDE window manager.
+	- Add Alt-tilde as a substitute key binding for Alt-Tab, which is used to show the corresponding 
+	  header/source file for a C or C++ file.
+
+Version 0.2.1 (July 26, 2002)
+
+	- Fix problem building on MacOS X (-lXext was not being passed to the linker).
+
+Version 0.2.0 (July 23, 2002)
+
+	- Disable syntax hiliting if display bit depth is less than 8.
+	- Fix problems building on Cygwin/XFree86.
+	- Menu for <a> tag.
+	- Fixed problem building from an untitled, never been saved project.
+	- Incorporated a patch from the Fink project.
+	- Fix some logic problems related to line numbers that occured when line wrapping was on
+	  (for example, clicking on error messages or the "Goto Line" command).
+	- Add "Wrap Lines" menu item to Build Output window.
+	- Some performance improvements in line wrapping support.
+
+Version 0.1.9 (July 1, 2002)
+	
+	- Added support for syntax hiliting in C/C++, Java and HTML code.  Colors can be customized by editing ~/.zoinks preference file.
+	- Break after spaces rather than before when line wrapping is enabled.
+	- Disable auto indent if line wrapping is enabled.
+	- Fixed problems drawing left select column in text windows that are scrolled horizontally and in text files that are very long.
+	
+Version 0.1.8 (June 26, 2002)
+	
+	- Fix some problems cancelling from a "Find File".
+	- Fixed an assert that occured after double clicking and drag selecting to the end of a text file.
+	- Fixed selection problem that occured when clicking in the left edge of an editor window.
+	- Add menu item to show/hide the HTML menu in text windows.
+	- Add cellpadding and cellspacing to <table> attribute menu.
+	- Fixed problem selecting the line when double clicking on an error in the "Build Output" window
+	  if the source file is not already opened.
+	- When zoinks is launched with a command line argument to open a file that does not exist,
+	  create a blank document but do not create a file in the file system until the user saves the document.
+	- Draw a thicker border around the focused text field in dialog windows.
+
+Version 0.1.7 (June 3, 2002)
+
+	- Forward delete is now supported using "Delete" key.
+	- Fixed an infinite loop in "Replace All"
+	- Support for drag selecting in grid views (like the open/save file list view).
+	- Draw border around default button in dialogs.
+	- Menu for <th> tag.
+	- Menu support for <table> width attribute.
+
+Version 0.1.6 (May 8, 2002)
+
+	- Added support for localization using the GNU gettext library.
+	  This can be disabled using the "configure --disable-nls" option.
+	- Added partial Japanese localization.  If anyone out there wants to finish this, let me know!
+	- Fixed some drawing problems that occured when editing mixed English and Japanese text.
+	- Fixed man page display on systems with a broken implementation of "col".
+	- Fixed some selection related problems in the text engine.
+	- Warn if Imlib is not found during configure (rather than giving an error).
+	- Fixed problems building with versions of make other than GNU make.
+	- Fixed invisible cursor (used for hiding cursor while typing).
+
+Version 0.1.5 (April 28, 2002)
+
+	- Fixed a number of problems with XIM support (used for Japanese text input).
+	- Fixed problem creating Zoinks preference file.
+	- Fixed a problem compiling on OpenBSD.
+	- Fixed another problem with K & R style C and the Functions menu.
+	- Fixed problems drawing on monochrome displays.
+
+Version 0.1.4 (April 22, 2002)
+
+	- Add <br> tags at the end of each line if the "Line Break" HTML command
+	  is applied to a selection that spans multiple lines.
+	- Prevent other windows from coming to the front when modal dialogs 
+	  are displayed.
+	- Don't hide the cursor in TTextView if a non printable key is pressed.
+	- Functions menu fixes, including support for K & R style C function definitions.
+	- Allow saving an unmodified unspecified text document.
+	- Close active menu if shortcut key is pressed while tracking a menu.
+	- Keep Find dialog in front after find or replace.
+	- Fix a crash that occured when deleting a window with pending updates.
+	- Add "Wrap Lines" menu item.
+	- Redraw after toggling line wrap in TTextView.
+
+Version 0.1.3 (April 12, 2002)
+
+	- Fix a crash that occured after triple clicking on a line and drag
+	  selecting to the bottom of a file that does not have a terminating 
+	  newline character.
+	- Fix a bug that prevented mouse copying text from a zoinks window to
+	  another application (like xterm and Mozilla).
+
+Version 0.1.2 (April 12, 2002)
+
+	- Add support for launching an external debugger.
+	  To use this feature, specify a command (like "xterm -e gdb myprogram")
+	  in the "Debugger Command" field in the project window.
+	- Fix drawing problem when scrolling partially obscured windows.
+	- Fix crash that occured when double clicking in an empty text view.
+	- Fixed TGridView double click handling logic.
+	- Project files no longer need to have ".proj" file name suffix.
+	- Report an error if weblint can not be found.
+	- Show Zoinks version number in about box.
+
+Version 0.1.1 (April 9, 2002)
+
+	- Renamed "zoinks" directory to "fw" (stands for framework).
+	- Fixed files with no terminating newline character.
+	- Added GPL license.
+	- Added about box.
+	- Allow drag select after double or triple clicking in text view.
+	- Hide text view cursor while typing.
+	- Added "Replace All" button to find dialog.
+	- Fixed problem mouse copying between text fields
+	
+	
+	
+	
