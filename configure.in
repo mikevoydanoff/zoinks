@@ -64,9 +64,9 @@ AC_TRY_COMPILE([#include <sys/types.h>
 AC_PATH_XTRA
 
 if test "x$x_includes" != x; then
-MY_CXXFLAGS="-g -Werror -Wall -I$x_includes"
+MY_CXXFLAGS="-g -Werror -Wno-deprecated -I$x_includes"
 else
-MY_CXXFLAGS="-g -Werror -Wall"
+MY_CXXFLAGS="-g -Werror -Wno-deprecated"
 fi
 AC_SUBST(MY_CXXFLAGS)
 
