@@ -1,5 +1,5 @@
 // ========================================================================================
-//	TDocument.cpp			 	Copyright (C) 2001-2002 Mike Lockwood. All rights reserved.
+//	TDocument.cpp			 	Copyright (C) 2001-2009 Mike Lockwood. All rights reserved.
 // ========================================================================================
 /*
 	This program is free software; you can redistribute it and/or
@@ -261,6 +261,11 @@ bool TDocument::AllowClose()
 bool TDocument::IsModified() const
 {
 	return fModified;
+}
+
+
+void TDocument::ShowLine(int line)
+{
 }
 
 

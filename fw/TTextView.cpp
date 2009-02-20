@@ -1,5 +1,5 @@
 // ========================================================================================
-//	TTextView.cpp			 	Copyright (C) 2001-2007 Mike Lockwood. All rights reserved.
+//	TTextView.cpp			 	Copyright (C) 2001-2009 Mike Lockwood. All rights reserved.
 // ========================================================================================
 /*
 	This program is free software; you can redistribute it and/or
@@ -43,6 +43,7 @@
 #include <X11/Xatom.h>
 #include <X11/cursorfont.h>
 #include <X11/keysym.h>
+#include <ctype.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
@@ -580,7 +581,7 @@ bool TTextView::DoKeyDown(KeySym key, TModifierState state, const char* string)
 			break;
 
 		case XK_BackSpace:
-      	case XK_Delete:
+	  	case XK_Delete:
  			if (fModifiable)
 			{
 				HideCursor();
@@ -606,7 +607,7 @@ bool TTextView::DoKeyDown(KeySym key, TModifierState state, const char* string)
 							AutoIndent();
 					}
 					else if (key == XK_Tab && fSpacesPerTab > 0 && 
-					    (state & ShiftMask) == 0)   // insert a real tab if shift key is pressed
+						(state & ShiftMask) == 0)   // insert a real tab if shift key is pressed
 						InsertTabSpaces();
 					else
 						ReplaceSelection(string, strlen(string), true, true, true);
@@ -724,17 +725,17 @@ void TTextView::InsertTabSpaces()
 		uint32 startLine = fLayout->OffsetToLine(fSelectionStart);
 		STextOffset lineOffset = fLayout->LineToOffset(startLine);
 		STextOffset lineLength;
-	    const TChar* lineText = fLayout->GetLineText(startLine, lineLength);								
+		const TChar* lineText = fLayout->GetLineText(startLine, lineLength);								
 
 		
 		// count is number of characters currently before the selection
 		int count = 0;
 		for (STextOffset i = lineOffset; i < fSelectionStart; i++)
 		{
-		    if (lineText[i - lineOffset] == '\t')
-		        count += kTabWidth;
-		    else
-		        count++;
+			if (lineText[i - lineOffset] == '\t')
+				count += kTabWidth;
+			else
+				count++;
 		}
 		
 		int spaces = fSpacesPerTab - (count % fSpacesPerTab);
@@ -911,7 +912,7 @@ void TTextView::ShiftSelectionRight()
 		tabString = new char[fSpacesPerTab + 1];
 		memset(tabString, ' ', fSpacesPerTab);
 		tabString[fSpacesPerTab] = 0;
-	    tabLength = fSpacesPerTab;
+		tabLength = fSpacesPerTab;
 	}
 
 	TString	text;
@@ -926,8 +927,8 @@ void TTextView::ShiftSelectionRight()
 		if (ch == kLineEnd10 || (ch == kLineEnd13 && !(i < length - 2 && text[i + 1] == kLineEnd10)))
 		{
 			text.Replace(i + 1, 0, tabString);
-        	i += tabLength;
-        	length += tabLength;
+			i += tabLength;
+			length += tabLength;
 		}
 	}
 	
@@ -1594,7 +1595,7 @@ void TTextView::DrawLine(uint32 line, TDrawContext& context, TCoord rightEdge)
 		}
 	}
 
-    EraseRightEdge(line, context, rightEdge, lineEnd);
+	EraseRightEdge(line, context, rightEdge, lineEnd);
 }
 
 
@@ -1653,7 +1654,7 @@ void TTextView::RedrawLines(uint32 startLine, uint32 endLine, bool showHideInser
 		rightEdge = fScroll.h + GetWidth();
 
 	for (uint32 line = startLine; line <= endLine; line++)
-        DrawLine(line, context, rightEdge);
+		DrawLine(line, context, rightEdge);
 
 	if (showHideInsertionPoint)
 		ShowInsertionPoint(context);
@@ -1958,9 +1959,17 @@ bool TTextView::DoCommand(TCommandHandler* sender, TCommandHandler* receiver, TC
 			if (fSelectionStart < fSelectionEnd)
 			{
 				TString	fileName(fLayout->GetText() + fSelectionStart, fSelectionEnd - fSelectionStart);
+				const char* colon = strchr(fileName, ':');
+				int line = 0;
+				if (colon && isdigit(colon[1]))
+				{
+					line = atoi(colon + 1);
+					fileName.Set(fileName, colon - fileName);
+				}
+
 				TFile* file = gApplication->FindFile(fileName, GetDocument());
 				if (file)
-					gApplication->OpenFile(file);
+					gApplication->OpenFile(file, line);
 				else
 					gApplication->Beep();
 			}

@@ -1,5 +1,5 @@
 // ========================================================================================
-//	TApplication.h			 	Copyright (C) 2001-2003 Mike Lockwood. All rights reserved.
+//	TApplication.h			 	Copyright (C) 2001-2009 Mike Lockwood. All rights reserved.
 // ========================================================================================
 /*
 	This program is free software; you can redistribute it and/or
@@ -74,7 +74,7 @@ public:
 	virtual void			DoSetupMenu(TMenu* menu);
 
 	void					GetUntitledDocumentTitle(TString& title);
-	TDocument*				OpenFile(TFile* file);
+	TDocument*				OpenFile(TFile* file, int line = 0);
 	void					OpenDocuments();
 	virtual TDocument*		CreateDocument(TFile* file);
 	TDocument*				FindDocument(const TChar* path);

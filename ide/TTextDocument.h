@@ -1,5 +1,5 @@
 // ========================================================================================
-//	TTextDocument.h			 	Copyright (C) 2001-2003 Mike Lockwood. All rights reserved.
+//	TTextDocument.h			 	Copyright (C) 2001-2009 Mike Lockwood. All rights reserved.
 // ========================================================================================
 /*
 	This program is free software; you can redistribute it and/or
@@ -51,6 +51,7 @@ protected:
 	virtual void			SetTitle(const TChar* title);
 	virtual bool			IsModified() const;
 	
+	virtual void			ShowLine(int line);
 
 protected:
 	TMenuBar*				MakeMenuBar(TWindow* window);

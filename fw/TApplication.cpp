@@ -1,5 +1,5 @@
 // ========================================================================================
-//	TApplication.cpp		 	Copyright (C) 2001-2003 Mike Lockwood. All rights reserved.
+//	TApplication.cpp		 	Copyright (C) 2001-2009 Mike Lockwood. All rights reserved.
 // ========================================================================================
 /*
 	This program is free software; you can redistribute it and/or
@@ -43,6 +43,7 @@
 
 #include <X11/Xutil.h>
 
+#include <ctype.h>
 #include <stdlib.h>
 #include <unistd.h>
 #include <string.h>
@@ -263,12 +264,25 @@ void TApplication::ProcessArguments()
 void TApplication::ProcessArgument(int& argIndex)
 {
 	const char* argument = fArguments[argIndex++];
+	TString fileName(argument);
+	const char* colon = strchr(argument, ':');
+	int line = 0;
 
-	TFile* file = new TFile(argument);
+	if (colon && isdigit(colon[1]))
+	{
+		line = atoi(colon + 1);
+		fileName.Set(argument, colon - argument);
+	}
+
+	TFile* file = new TFile(fileName);
 	
 	TDocument* document = CreateDocument(file);
 	if (document)
+	{
 		OpenWindowContext(document);
+		if (line)
+			document->ShowLine(line);
+	}
 }
 
 
@@ -468,7 +482,7 @@ void TApplication::GetUntitledDocumentTitle(TString& title)
 }
 
 
-TDocument* TApplication::OpenFile(TFile* file)
+TDocument* TApplication::OpenFile(TFile* file, int line)
 {
 	// first see if it is already open
 	TDocument* document = FindDocument(file->GetPath());
@@ -478,6 +492,8 @@ TDocument* TApplication::OpenFile(TFile* file)
 		TTopLevelWindow* window = document->GetMainWindow();
 		if (window)
 			window->Raise();
+		if (line)
+			document->ShowLine(line);
 
 		return document;
 	}
@@ -485,7 +501,11 @@ TDocument* TApplication::OpenFile(TFile* file)
 	// create new document
 	document = CreateDocument(file);
 	if (document)
+	{
 		OpenWindowContext(document);
+		if (line)
+			document->ShowLine(line);
+	}
 
 	return document;
 }
@@ -499,11 +519,19 @@ void TApplication::FindFile()
 
 	if (result)
 	{
+		const char* colon = strchr(fileName, ':');
+		int line = 0;
+		if (colon && isdigit(colon[1]))
+		{
+			line = atoi(colon + 1);
+			fileName.Set(fileName, colon - fileName);
+		}
+	
 		TFile* file = FindFile(fileName);
 
 		if (file)
 		{
-			OpenFile(file);
+			OpenFile(file, line);
 			delete file;
 		}
 		else if (!fFindFileCancelled)

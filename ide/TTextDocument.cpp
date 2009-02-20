@@ -1,5 +1,5 @@
 // ========================================================================================
-//	TTextDocument.cpp		 	Copyright (C) 2001-2008 Mike Lockwood. All rights reserved.
+//	TTextDocument.cpp		 	Copyright (C) 2001-2009 Mike Lockwood. All rights reserved.
 // ========================================================================================
 /*
 	This program is free software; you can redistribute it and/or
@@ -411,6 +411,13 @@ void TTextDocument::SetTitle(const TChar* title)
 bool TTextDocument::IsModified() const
 {
 	return (fModified && fTextView->NeedsSaving()) || fLineEndingsChanged;
+}
+
+
+void TTextDocument::ShowLine(int line)
+{
+	if (fTextView)
+		fTextView->SelectLine(line - 1);
 }
 
 

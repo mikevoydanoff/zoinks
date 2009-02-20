@@ -1,5 +1,5 @@
 // ========================================================================================
-//	TDocument.h		 			Copyright (C) 2001-2002 Mike Lockwood. All rights reserved.
+//	TDocument.h		 			Copyright (C) 2001-2009 Mike Lockwood. All rights reserved.
 // ========================================================================================
 /*
 	This program is free software; you can redistribute it and/or
@@ -51,6 +51,8 @@ public:
 
 	virtual bool			IsModified() const;
 	inline void				SetModified(bool modified) { fModified = modified; }
+
+	virtual void			ShowLine(int line);
 
 	inline const TFile&		GetFile() const { return fFile; }
 
