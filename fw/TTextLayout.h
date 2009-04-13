@@ -39,7 +39,7 @@ typedef void (* LinesDeletedProc)(TTextLayout* layout, uint32 line, uint32 count
 class TTextLayout
 {		
 public:
-								TTextLayout(TFont* font, const TPoint& inset, TCoord tabWidth, bool multiLine, bool lineWrap);		
+								TTextLayout(TFont* font, const TPoint& inset, int spacesPerTab, bool multiLine, bool lineWrap);		
 	virtual						~TTextLayout();
 
 	void						SetText(TChar* text, STextOffset length = 0, bool ownsData = false);
@@ -58,7 +58,8 @@ public:
 
 	STextOffset					LineToOffset(uint32 line, bool ignoreWrappedLines = false) const;
 	uint32						OffsetToLine(STextOffset offset, bool ignoreWrappedLines = false) const;
-	
+	uint32						OffsetToColumn(STextOffset offset) const;
+
 	void						ReplaceText(STextOffset offset, STextOffset endOffset, const TChar* text, STextOffset length,
 											uint32& outRedrawLinesStart, uint32& outRedrawLinesEnd);
 
@@ -69,6 +70,7 @@ public:
 	TCoord						GetLineAscent(uint32 line) const;
 	TCoord						GetLineHeight(uint32 line) const;
 	TCoord						GetLineWidth(uint32 line) const;
+	inline TCoord				GetTabWidth() const { return fTabWidth; }
 
 	void						ComputeContentSize(TPoint& contentSize);
 
@@ -124,6 +126,7 @@ protected:
 	STextOffset					fLineCount;
 	TFont*						fFont;
 	TPoint						fInset;
+	int							fSpacesPerTab;
 	TCoord						fTabWidth;
 	TCoord						fWidth;			// width of containing view (for line wrap)
 	TLineEndingFormat			fLineEndingFormat;

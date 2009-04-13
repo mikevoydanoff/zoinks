@@ -207,7 +207,6 @@ protected:
 	int							fTrackingClickCount;	// if > 0, we are tracking the mouse, and this is the click count
 	bool						fInsertionPointOn;
 	TCoord						fUpDownHorizOffset;		// for up/down arrow keys
-	TCoord						fTabWidth;				// width of tab in pixels
 	int							fSpacesPerTab;			// if non-zero, number of spaces per tab stop
 	bool						fAutoIndent;
 

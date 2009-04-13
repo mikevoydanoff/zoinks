@@ -210,13 +210,13 @@ void TFileDiffDocument::Open(TDocumentWindow* window)
 	
 	TStatusBar* statusBar1 = new TStatusBar(leftContainer, left, font);
 	statusBar1->SetWindowPositioner(BottomScrollBar);
-	statusBar1->InsertItem(5);	// for line number
-	statusBar1->InsertItem(70);	// for file path
+	statusBar1->InsertItem(5);		// for line number
+	statusBar1->InsertItem(100);	// for file path
 
 	TStatusBar* statusBar2 = new TStatusBar(rightContainer, left, font);
 	statusBar2->SetWindowPositioner(BottomScrollBar);
-	statusBar2->InsertItem(5);	// for line number
-	statusBar2->InsertItem(70);	// for file path
+	statusBar2->InsertItem(5);		// for line number
+	statusBar2->InsertItem(100);	// for file path
 
 	TWindow* bottomContainer = new TWindow(splitter1, bottom);
 

@@ -97,11 +97,11 @@ TTextView::TTextView(TWindow* parent, const TRect& bounds, TFont* font, bool mod
 	ASSERT(font);
 	font->AddRef();
 
-	fTabWidth = font->MeasureText("    ");	// assuming tab width = 4
-
 	SetIdleFrequency(kCursorBlinkTime);
 
-	fLayout = new TTextLayout(font, TPoint(fInset.left, fInset.top), fTabWidth, multiLine, fLineWrap);
+	// assume tab is 4 spaces wide by default
+	int tabLength = (fSpacesPerTab > 0 ? fSpacesPerTab : 4);
+	fLayout = new TTextLayout(font, TPoint(fInset.left, fInset.top), tabLength, multiLine, fLineWrap);
 	ComputeContentSize();
 }
 
@@ -1665,7 +1665,7 @@ void TTextView::DrawText(const TChar* text, int length, TDrawContext& context)
 {
 	const TChar* start = text;
 	const TChar* end = text + length;
-	TCoord tabWidth = fTabWidth;
+	TCoord tabWidth = fLayout->GetTabWidth();
 	TCoord leftInset = fInset.left;
 
 	while (start < end)

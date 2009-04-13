@@ -66,14 +66,14 @@ static inline bool AllowBreakAfter(const TChar* text)
 }
 
 
-TTextLayout::TTextLayout(TFont* font, const TPoint& inset, TCoord tabWidth, bool multiLine, bool lineWrap)
+TTextLayout::TTextLayout(TFont* font, const TPoint& inset, int spacesPerTab, bool multiLine, bool lineWrap)
 	:	fText(NULL),
 		fTextLength(0),
 		fLineBreaks(NULL),
 		fLineCount(0),
 		fFont(font),
 		fInset(inset),
-		fTabWidth(tabWidth),
+		fSpacesPerTab(spacesPerTab),
 		fLineEndingFormat(kUnixLineEndingFormat),
 		fMultiLine(multiLine),
 		fLineWrap(lineWrap),
@@ -83,6 +83,12 @@ TTextLayout::TTextLayout(TFont* font, const TPoint& inset, TCoord tabWidth, bool
 {
 	ASSERT(font);
 	font->AddRef();
+
+	char* spaces = new char[spacesPerTab + 1];
+	memset(spaces, ' ', spacesPerTab);
+	spaces[spacesPerTab] = 0;
+	fTabWidth = font->MeasureText(spaces);
+	delete[] spaces;
 
 	// initialize layout with one empty line
 	RecalcLineBreaks();
@@ -406,6 +412,27 @@ uint32 TTextLayout::OffsetToLine(STextOffset offset, bool ignoreWrappedLines) co
 	}
 	else
 		return 0;	
+}
+
+
+uint32 TTextLayout::OffsetToColumn(STextOffset offset) const
+{
+	if (offset > fTextLength)
+		offset = fTextLength;
+	const TChar* text = fText + LineToOffset(OffsetToLine(offset));
+	const TChar* end = fText + offset;
+	uint32 column = 0;
+
+	while (text < end)
+	{
+		if (*text == '\t')
+			column = ((column + fSpacesPerTab - 1) / fSpacesPerTab) * fSpacesPerTab;
+		else
+			column++;
+		NextCharacter(text);
+	}
+
+	return column;
 }
 
 

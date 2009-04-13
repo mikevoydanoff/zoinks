@@ -58,18 +58,22 @@ bool TLineNumberBehavior::DoCommand(TCommandHandler* sender, TCommandHandler* re
 	{
 		STextOffset	start, end;
 		fTextView->GetSelection(start, end);
-
+		TTextLayout* layout = fTextView->GetTextLayout();
 		uint32 line;
 		if (start != fSelectionStart)
-			line = fTextView->GetTextLayout()->OffsetToLine(start, true);
+			line = layout->OffsetToLine(start, true);
 		else
-			line = fTextView->GetTextLayout()->OffsetToLine(end, true);
+			line = layout->OffsetToLine(end, true);
 
 		fSelectionStart = start;
 		fSelectionEnd = end;
 				
 		char buffer[30];
-		sprintf(buffer, _("Line %ld"), line + 1);
+		if (start == end)
+			sprintf(buffer, _("Line %ld:%ld"), line + 1, layout->OffsetToColumn(start));
+		else
+			sprintf(buffer, _("Line %ld"), line + 1);
+
 		fStatusBar->SetStatus(buffer, fStatusIndex);
 	}
 
