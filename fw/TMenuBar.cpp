@@ -34,6 +34,7 @@
 
 #include "intl.h"
 
+#include <limits.h>
 #include <stdio.h>
 
 const TCoord kMenuInset = 5;
@@ -251,7 +252,9 @@ int TMenuBar::FindMenu(const TPoint& point)
 	{
 		TRect	bounds;
 		GetItemBounds(i, bounds);
-		bounds.top = 0;		// tweak for menus displayed above the menu bar
+		// only compare against horizontal boundaries
+		bounds.top = INT_MIN;
+		bounds.bottom = INT_MAX;
 
 		if (bounds.Contains(point))
 		{
