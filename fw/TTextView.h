@@ -194,6 +194,7 @@ protected:
 	void						AdjustOffsets(STextOffset offset, int shift);
 	
 	void						SetIMLocation();
+	inline bool                 IsTrackingMouse() const { return fTrackingClickCount > 0; }
 
 protected:
 	TTextLayout*				fLayout;

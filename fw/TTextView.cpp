@@ -754,7 +754,8 @@ void TTextView::InsertText(STextOffset location, const TChar* text, STextOffset 
 	uint32 redrawStart, redrawEnd;
 	fLayout->ReplaceText(location, location, text, length, redrawStart, redrawEnd);
 
-	SetSelection(location + length);
+	if (!IsTrackingMouse())
+		SetSelection(location + length);
 	ComputeContentSize();
 
 	if (IsVisible())
