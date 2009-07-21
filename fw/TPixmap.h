@@ -26,7 +26,7 @@
 class TPixmap : public TDrawable
 {
 public:
-							TPixmap(char** xpmData);						
+							TPixmap(const char** xpmData);						
 							TPixmap(char* xpmFilePath);						
 	virtual 				~TPixmap();
 

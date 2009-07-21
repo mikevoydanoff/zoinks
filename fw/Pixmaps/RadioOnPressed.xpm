@@ -1,5 +1,5 @@
 /* XPM */
-static char * RadioOnPressed_xpm[] = {
+static const char * RadioOnPressed_xpm[] = {
 "13 13 6 1",
 " 	c None",
 ".	c #949594",

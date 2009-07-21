@@ -1,5 +1,5 @@
 /* XPM */
-static char * TriangleOpened_xpm[] = {
+static const char * TriangleOpened_xpm[] = {
 "9 9 4 1",
 " 	c None",
 ".	c #FFFFFF",

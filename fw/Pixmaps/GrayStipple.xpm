@@ -1,5 +1,5 @@
 /* XPM */
-static char * GrayStipple_xpm[] = {
+static const char * GrayStipple_xpm[] = {
 "32 32 2 1",
 ".	c #000000",
 "+	c #FFFFFF",

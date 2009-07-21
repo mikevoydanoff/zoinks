@@ -398,15 +398,17 @@ void TFile::NormalizePath(TString& path)
 	if (path[0] == '.' && (path.GetLength() == 1 || path[1] == '/'))
 	{
 		char	cwd[PATH_MAX + 2];
-		getcwd(cwd, PATH_MAX);
-		path.Replace(0, 1, cwd);	// replace '.' with cwd
+		if (getcwd(cwd, PATH_MAX))
+			path.Replace(0, 1, cwd);	// replace '.' with cwd
 	}
 	else if (path[0] != '/')
 	{
 		char	cwd[PATH_MAX + 2];
-		getcwd(cwd, PATH_MAX);
-		strcat(cwd, "/");
-		path.Replace(0, 0, cwd);	// prepend cwd + '/' before the file name
+		if (getcwd(cwd, PATH_MAX))
+		{
+			strcat(cwd, "/");
+			path.Replace(0, 0, cwd);	// prepend cwd + '/' before the file name
+		}
 	}
 	// first remove all "/./" within the path
 	const char* subStr = strstr(path, "/./");

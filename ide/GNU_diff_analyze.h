@@ -21,7 +21,7 @@
 #define __GNU_diff_analyze__
 
 
-typedef struct file_data {
+struct file_data {
     int buffered_lines;
 
     /* Vector, indexed by line number, containing an equivalence code for

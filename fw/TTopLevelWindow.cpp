@@ -91,8 +91,8 @@ void TTopLevelWindow::Create()
 		}
 		
 		XClassHint* classHints = XAllocClassHint();
-		classHints->res_name = "Zoinks";
-		classHints->res_class = "ZOINKS";
+		classHints->res_name = (char *)"Zoinks";
+		classHints->res_class = (char *)"ZOINKS";
 		
 		int argc = 0;
 		char** argv = NULL;

@@ -26,7 +26,6 @@
 #include "TEditorTextView.h"
 #include "fw/TCursor.h"
 #include "fw/TDrawContext.h"
-#include "fw/TSettingsFile.h"
 
 #include <X11/cursorfont.h>
 

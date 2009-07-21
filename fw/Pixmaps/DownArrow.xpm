@@ -1,5 +1,5 @@
 /* XPM */
-static char * DownArrow_xpm[] = {
+static const char * DownArrow_xpm[] = {
 "7 4 3 1",
 " 	c None",
 ".	c #000000",

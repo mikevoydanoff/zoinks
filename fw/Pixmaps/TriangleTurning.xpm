@@ -1,5 +1,5 @@
 /* XPM */
-static char * TriangleTurning_xpm[] = {
+static const char * TriangleTurning_xpm[] = {
 "9 9 4 1",
 " 	c None",
 ".	c #FFFFFF",

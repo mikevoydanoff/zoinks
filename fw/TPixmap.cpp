@@ -32,7 +32,7 @@
 #include <string.h>
 
 
-TPixmap::TPixmap(char** xpmData)
+TPixmap::TPixmap(const char** xpmData)
 	:	fPixmap(0),
 		fMask(0)
 {
@@ -41,7 +41,7 @@ TPixmap::TPixmap(char** xpmData)
 	attributes.closeness = 40000;
 	
    int result = XpmCreatePixmapFromData(gApplication->GetDisplay(), gApplication->GetRootWindow(),
-   									xpmData, &fPixmap, &fMask, &attributes);
+   									(char **)xpmData, &fPixmap, &fMask, &attributes);
    	ASSERT(result == 0);
    	
    	// Fill out TDrawable values

@@ -40,7 +40,7 @@ const TTime kScrollRepeat = 200;
 
 TPixmap* TScrollBar::fArrowPixmaps[4] = {NULL, NULL, NULL, NULL};
 
-char** TScrollBar::fArrowPixmapData[4] =
+const char** TScrollBar::fArrowPixmapData[4] =
 {
 	LeftArrow_xpm,
 	RightArrow_xpm,

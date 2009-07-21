@@ -367,7 +367,7 @@ static bool LinesAreEqual(uint32 leftLine, TTextLayout* leftLayout, uint32 right
 }
 
 
-typedef struct EquivClass
+struct EquivClass
 {
 	uint32 			line;
 	TTextLayout* 	layout;

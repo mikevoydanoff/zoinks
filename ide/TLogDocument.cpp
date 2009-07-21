@@ -265,7 +265,7 @@ void TLogDocument::Truncate(uint32 chars)
 
 void TLogDocument::ClearText()
 {
-	fTextView->SetText("");
+	fTextView->SetText((char *)"");
 }
 
 

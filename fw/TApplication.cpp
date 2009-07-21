@@ -164,8 +164,8 @@ void TApplication::Initialize()
 	fLeaderWindow = XCreateSimpleWindow(fDisplay, GetRootWindow(), 10, 10, 10, 10, 0, 0, 0);
 	
 	XClassHint* classHint = XAllocClassHint();
-	classHint->res_name = "Zoinks";
-	classHint->res_class = "ZOINKS";
+	classHint->res_name = (char *)"Zoinks";
+	classHint->res_class = (char *)"ZOINKS";
 	
 	XWMHints* wmHints = NULL;
 	TPixmap* icon = GetIcon();

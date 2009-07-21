@@ -110,7 +110,7 @@ protected:
 	bool						fProportionalThumbs;
 
 	static TPixmap*				fArrowPixmaps[4];
-	static char**				fArrowPixmapData[4];
+	static const char**			fArrowPixmapData[4];
 };
 
 #endif // __TScrollBar__

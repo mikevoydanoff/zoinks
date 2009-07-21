@@ -906,7 +906,7 @@ void TTextView::ShiftSelectionRight()
 		fLayout->PreviousCharacter(selectionEnd);
 	int length = selectionEnd - fSelectionStart;
 	
-	char* tabString = "\t";
+	char* tabString = (char *)"\t";
 	int tabLength = 1;  // length of tabString
 	if (fSpacesPerTab > 0)
 	{

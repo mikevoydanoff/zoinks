@@ -1,5 +1,5 @@
 /* XPM */
-static char * UpArrow_xpm[] = {
+static const char * UpArrow_xpm[] = {
 "7 4 3 1",
 " 	c None",
 ".	c #D6D3CE",
