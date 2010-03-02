@@ -47,6 +47,21 @@
 
 static TString	sCurrentDirectory(".");
 
+static TString& GetCurrentDirectory()
+{
+	TDirectory  directory(sCurrentDirectory);
+	if (directory.Exists())
+		return sCurrentDirectory;
+	
+	// if current directory has disappeared, try home directory
+	TDirectory home(getenv("HOME"));
+	if (home.Exists())
+		sCurrentDirectory = home.GetPath();
+	else
+		sCurrentDirectory = "/";
+
+	return sCurrentDirectory;	
+}
 
 class TOpenSaveFilesDialogBehavior : public TBehavior
 {
@@ -198,7 +213,7 @@ TFile* TCommonDialogs::DoOpenFiles(TWindow* owner, bool allowMultiple, TList<TFi
 	scroller->SetBackColor(kWhiteColor);
 	scroller->SetWindowPositioner(SizeRelativeParent);
 
-	TDirectoryListView* listView = new TDirectoryListView(scroller, r, sCurrentDirectory, true);
+	TDirectoryListView* listView = new TDirectoryListView(scroller, r, GetCurrentDirectory(), true);
 	listView->SetMultiSelect(allowMultiple);
 	scroller->SetContainedView(listView);
 	dialog->SetTarget(listView);
@@ -304,7 +319,7 @@ TDirectory* TCommonDialogs::ChooseDirectory(TWindow* owner)
 	scroller->SetBackColor(kWhiteColor);
 	scroller->SetWindowPositioner(SizeRelativeParent);
 
-	TDirectoryListView* listView = new TDirectoryListView(scroller, r, sCurrentDirectory, false);
+	TDirectoryListView* listView = new TDirectoryListView(scroller, r, GetCurrentDirectory(), false);
 	scroller->SetContainedView(listView);
 	dialog->SetTarget(listView);
 
@@ -380,7 +395,7 @@ TFile* TCommonDialogs::SaveFile(const char* path, TWindow* owner)
 	scroller->SetBackColor(kWhiteColor);
 	scroller->SetWindowPositioner(SizeRelativeParent);
 
-	TDirectoryListView* listView = new TDirectoryListView(scroller, r, sCurrentDirectory, false);
+	TDirectoryListView* listView = new TDirectoryListView(scroller, r, GetCurrentDirectory(), false);
 	scroller->SetContainedView(listView);
 
 	TRect	r1(20, 10, bounds.right - 20, 30);
