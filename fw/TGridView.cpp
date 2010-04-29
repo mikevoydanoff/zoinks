@@ -680,6 +680,8 @@ TCoord TGridView::GetPageIncrement(TScrollDirection direction) const
 		}
 
 		case kScrollDown:
+			if (cells.bottom == 0)
+				return 0;
 			GetCellBounds(cells.bottom - 1, cells.left, bounds);
 			if (bounds.top - fScroll.v > 0)
 				return bounds.top - fScroll.v;
