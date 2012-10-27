@@ -378,6 +378,6 @@ void TDrawContext::ClipSubWindows(bool clip)
 void TDrawContext::Initialize(Display* display)
 {
 	sDisplay = display;
-	sDefaultFont = new TFont(_("-adobe-helvetica-bold-r-normal-*-12-*-*-*-*-*-*-*"));
+	sDefaultFont = new TFont(_("-*-*-bold-r-normal-*-12-*-*-*-*-*-*-*"));
 	sDefaultFont->AddRef();
 }
