@@ -50,7 +50,7 @@ TMenuBar::TMenuBar(TWindow* parent, const TRect& bounds, TFont* font)
 	if (!font)
 	{
 		if (!sDefaultFont)
-			sDefaultFont = new TFont(_("-*-*-medium-r-normal-*-12-*-*-*-*-*-iso8859-1"));
+			sDefaultFont = new TFont(_("-*-*-medium-r-normal-*-14-*-*-*-*-*-iso8859-1"));
 		
 		font = sDefaultFont;
 	}

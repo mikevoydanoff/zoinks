@@ -100,14 +100,14 @@ void TDiffListView::DrawCell(int row, int column, const TRect& cellBounds, TDraw
 	if (enabled)
 	{
 		if (!sEnabledFont)
-			sEnabledFont = new TFont(_("-adobe-helvetica-medium-r-normal-*-12-*-*-*-*-*-*-*"));
+			sEnabledFont = new TFont(_("-*-*-medium-r-normal-*-13-*-*-*-*-*-*-*"));
 			
 		context.SetFont(sEnabledFont);
 	}
 	else
 	{
 		if (!sDisabledFont)
-			sDisabledFont = new TFont(_("-adobe-helvetica-medium-o-normal-*-12-*-*-*-*-*-*-*"));
+			sDisabledFont = new TFont(_("-*-*-medium-o-normal-*-13-*-*-*-*-*-*-*"));
 			
 		context.SetFont(sDisabledFont);
 	}

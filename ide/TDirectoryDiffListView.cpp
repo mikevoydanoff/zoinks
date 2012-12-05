@@ -63,7 +63,7 @@ void TDirectoryDiffListView::InitDrawContext(TDrawContext& context)
 	TTreeView::InitDrawContext(context);
 
 	if (!sFont)
-		sFont = new TFont("-adobe-helvetica-medium-r-normal-*-12-*-*-*-*-*-*-*");
+		sFont = new TFont("-*-*-medium-r-normal-*-13-*-*-*-*-*-*-*");
 
 	context.SetFont(sFont);
 }

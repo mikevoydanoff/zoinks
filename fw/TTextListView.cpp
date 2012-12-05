@@ -53,7 +53,7 @@ void TTextListView::InitDrawContext(TDrawContext& context)
 	TListView::InitDrawContext(context);
 
 	if (!sFont)
-		sFont = new TFont(_("-adobe-helvetica-medium-r-normal-*-12-*-*-*-*-*-*-*"));
+		sFont = new TFont(_("-*-*-medium-r-normal-*-13-*-*-*-*-*-*-*"));
 
 	context.SetFont(sFont);
 }
