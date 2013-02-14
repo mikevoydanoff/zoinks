@@ -494,7 +494,7 @@ bool TTextDocument::DoKeyDown(KeySym key, TModifierState state, const char* stri
 {
 	// support for the "Andy Feature"
 	// open matching header/source file with Alt-Tab or Alt-tilde
-	if ((key == XK_Tab || key == XK_grave) && (state & Mod1Mask))
+	if ((key == XK_Tab || key == XK_grave || key == XK_T || key == XK_t) && (state & Mod1Mask))
 	{
 		if (fFile.IsSpecified())
 		{
