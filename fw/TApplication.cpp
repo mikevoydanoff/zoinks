@@ -334,14 +334,13 @@ void TApplication::PollEvent(bool allowSleep)
 		{
 			XEvent	event;
 			XNextEvent(fDisplay, &event);
-			
 			TWindow* imWindow = TInputContext::GetFocusedWindow();
-			
-			if (!XFilterEvent(&event, (imWindow ? imWindow->GetXWindow() : None)))
+
+			if (event.type == KeyPress || event.type == KeyRelease || !XFilterEvent(&event, (imWindow ? imWindow->GetXWindow() : None)))
 			{
 				ASSERT(event.xany.display == fDisplay);
 				TWindow* window = TWindow::GetWindow(event.xany.window);
-	
+
 				if (window)
 				{
 					if (fModalDialog)
