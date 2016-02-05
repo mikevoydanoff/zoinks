@@ -18,7 +18,7 @@ XGETTEXT_OPTIONS = --keyword=_ --keyword=N_
 # or entity, or to disclaim their copyright.  The empty string stands for
 # the public domain; in this case the translators are expected to disclaim
 # their copyright.
-COPYRIGHT_HOLDER = Mike Lockwood
+COPYRIGHT_HOLDER = Mike Voydanoff
 YEAR = 2003
 
 # This is the list of locale categories, beyond LC_MESSAGES, for which the

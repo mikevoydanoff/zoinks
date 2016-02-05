@@ -1,5 +1,5 @@
 // ========================================================================================
-//	TDirectoryDiffListView.cpp		 Copyright (C) 2003 Mike Lockwood. All rights reserved.
+//	TDirectoryDiffListView.cpp		Copyright (C) 2003 Mike Voydanoff. All rights reserved.
 // ========================================================================================
 /*
 	This program is free software; you can redistribute it and/or

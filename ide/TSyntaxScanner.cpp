@@ -1,5 +1,5 @@
 // ========================================================================================
-//	TSyntaxScanner.cpp			Copyright (C) 2001-2003 Mike Lockwood. All rights reserved.
+//	TSyntaxScanner.cpp		   Copyright (C) 2001-2003 Mike Voydanoff. All rights reserved.
 // ========================================================================================
 /*
 	This program is free software; you can redistribute it and/or

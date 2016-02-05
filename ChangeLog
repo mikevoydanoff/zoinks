@@ -1,3 +1,10 @@
+Version 0.4.3 (February 5, 2016)
+	- Update author's name to new last name (Lockwood -> Voydanoff)
+	- Add Alt-T as short cut for switching between C/C++ source and header files
+	- Switch fonts to work with more recent Linux distros
+	- Remove -Werror
+	- Various other fixes that have accumulated over the last 8 years
+
 Version 0.4.2 (November 18, 2008)
 
 	- Ignore CVS, .svn and .git directories and python .pyc files in directory compare.

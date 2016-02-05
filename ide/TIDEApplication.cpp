@@ -1,5 +1,5 @@
 // ========================================================================================
-//	TIDEApplication.cpp		 	Copyright (C) 2001-2008 Mike Lockwood. All rights reserved.
+//	TIDEApplication.cpp		   Copyright (C) 2001-2008 Mike Voydanoff. All rights reserved.
 // ========================================================================================
 /*
 	This program is free software; you can redistribute it and/or
@@ -316,13 +316,13 @@ void TIDEApplication::ShowAboutBox()
 
 	TString	copyright(_("Zoinks "));
 	copyright += VERSION;
-	copyright += _(" (c) 2001-2008 Mike Lockwood.");
+	copyright += _(" (c) 2001-2016 Mike Voydanoff.");
 
 	TStaticText* staticText = new TStaticText(dialog, TRect(20, 20, dialogBounds.GetWidth() - 20, 36), copyright, kTextAlignCenter);
 	staticText->SetWindowPositioner(CenterHorizontal);	
 	staticText = new TStaticText(dialog, TRect(20, 36, dialogBounds.GetWidth() - 20, 52), _("All Rights Reserved."), kTextAlignCenter);
 	staticText->SetWindowPositioner(CenterHorizontal);	
-	staticText = new TStaticText(dialog, TRect(20, 52, dialogBounds.GetWidth() - 20, 68), _("http://zoinks.mikelockwood.com"), kTextAlignCenter);
+	staticText = new TStaticText(dialog, TRect(20, 52, dialogBounds.GetWidth() - 20, 68), _("https://github.com/mikevoydanoff/zoinks"), kTextAlignCenter);
 	staticText->SetWindowPositioner(CenterHorizontal);	
 	staticText = new TStaticText(dialog, TRect(20, 90, dialogBounds.GetWidth() - 20, 106), _("Zoinks is released under the GNU General Public License."), kTextAlignCenter);
 	staticText->SetWindowPositioner(CenterHorizontal);	

@@ -1,5 +1,5 @@
 # Zoinks Japanese Localization.
-# Copyright (C) Mike Lockwood 2002
+# Copyright (C) Mike Voydanoff 2002
 #
 #, fuzzy
 msgid ""
@@ -409,7 +409,7 @@ msgid "Zoinks "
 msgstr ""
 
 #: ide/TIDEApplication.cpp:308
-msgid " (c) 2001-2007 Mike Lockwood."
+msgid " (c) 2001-2016 Mike Voydanoff."
 msgstr ""
 
 #: ide/TIDEApplication.cpp:312
@@ -417,8 +417,8 @@ msgid "All Rights Reserved."
 msgstr ""
 
 #: ide/TIDEApplication.cpp:314
-msgid "http://zoinks.mikelockwood.com"
-msgstr "http://zoinks.mikelockwood.com"
+msgid "https://github.com/mikevoydanoff/zoinks"
+msgstr https://github.com/mikevoydanoff/zoinks"
 
 #: ide/TIDEApplication.cpp:316
 msgid "Zoinks is released under the GNU General Public License."

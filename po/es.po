@@ -7,107 +7,108 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zoinks 0.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-04-06 16:56-0400\n"
+"POT-Creation-Date: 2016-02-05 15:37-0800\n"
 "PO-Revision-Date: 2005-04-02\n"
 "Last-Translator: Martin Zelaia <martintxoz@gmail.com>\n"
 "Language-Team: Español\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=iso-8859-15\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: fw/TApplication.cpp:207 fw/TApplication.cpp:212 fw/TApplication.cpp:222
-#: fw/TApplication.cpp:238 fw/TApplication.cpp:244 fw/TApplication.cpp:398
-#: fw/TApplication.cpp:403 fw/TApplication.cpp:413 fw/TCommonDialogs.cpp:456
-#: fw/TDirectoryListView.cpp:107
+#: fw/TApplication.cpp:208 fw/TApplication.cpp:213 fw/TApplication.cpp:223
+#: fw/TApplication.cpp:239 fw/TApplication.cpp:245 fw/TApplication.cpp:411
+#: fw/TApplication.cpp:416 fw/TApplication.cpp:426 fw/TCommonDialogs.cpp:471
+#: fw/TDirectoryListView.cpp:109
 msgid "Error"
 msgstr "Error"
 
-#: fw/TApplication.cpp:222 fw/TApplication.cpp:256
+#: fw/TApplication.cpp:223 fw/TApplication.cpp:257
 msgid "Got an unknown exception"
 msgstr "Recibida una excepción desconocida"
 
-#: fw/TApplication.cpp:464
+#: fw/TApplication.cpp:477
 #, c-format
 msgid "Untitled %d"
 msgstr "Sin titulo %d"
 
-#: fw/TApplication.cpp:498
+#: fw/TApplication.cpp:517
 msgid "File Name:"
 msgstr "Nombre del archivo"
 
-#: fw/TApplication.cpp:498
+#: fw/TApplication.cpp:517
 msgid "Find File"
 msgstr "Busca archivo"
 
-#: fw/TApplication.cpp:514
+#: fw/TApplication.cpp:541
 msgid "Find File Error"
 msgstr "Error en buscar archivo"
 
-#: fw/TCommonDialogs.cpp:191
+#: fw/TCommonDialogs.cpp:206
 msgid "Open File..."
 msgstr "Abrir archivo"
 
-#: fw/TCommonDialogs.cpp:212 fw/TCommonDialogs.cpp:317
-#: fw/TCommonDialogs.cpp:405
+#: fw/TCommonDialogs.cpp:227 fw/TCommonDialogs.cpp:332
+#: fw/TCommonDialogs.cpp:420
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: fw/TCommonDialogs.cpp:217 fw/TCommonDialogs.cpp:322
-#: fw/TCommonDialogs.cpp:410 ide/TIDEApplication.cpp:328
+#: fw/TCommonDialogs.cpp:232 fw/TCommonDialogs.cpp:337
+#: fw/TCommonDialogs.cpp:425 ide/TIDEApplication.cpp:339
 msgid "OK"
 msgstr "OK"
 
-#: fw/TCommonDialogs.cpp:224 fw/TCommonDialogs.cpp:328
-#: fw/TCommonDialogs.cpp:417
+#: fw/TCommonDialogs.cpp:239 fw/TCommonDialogs.cpp:343
+#: fw/TCommonDialogs.cpp:432
 msgid "Up"
 msgstr "Arriba"
 
-#: fw/TCommonDialogs.cpp:228 fw/TCommonDialogs.cpp:332
-#: fw/TCommonDialogs.cpp:421
+#: fw/TCommonDialogs.cpp:243 fw/TCommonDialogs.cpp:347
+#: fw/TCommonDialogs.cpp:436
 msgid "Home"
 msgstr "Home"
 
-#: fw/TCommonDialogs.cpp:232 fw/TCommonDialogs.cpp:336
-#: fw/TCommonDialogs.cpp:425
+#: fw/TCommonDialogs.cpp:247 fw/TCommonDialogs.cpp:351
+#: fw/TCommonDialogs.cpp:440
 msgid "Working Dir."
 msgstr "Dir. trabajo"
 
-#: fw/TCommonDialogs.cpp:297
+#: fw/TCommonDialogs.cpp:312
 msgid "Choose Directory..."
 msgstr "Elije directorio..."
 
-#: fw/TCommonDialogs.cpp:372 fw/TCommonDialogs.cpp:393
+#: fw/TCommonDialogs.cpp:387 fw/TCommonDialogs.cpp:408
 msgid "Save File As..."
 msgstr "Guardar archivo como..."
 
-#: fw/TCommonDialogs.cpp:456
+#: fw/TCommonDialogs.cpp:471
 msgid "Can not overwrite a directory with a file"
 msgstr "No puedo sobreescribir un directorio con un archivo"
 
-#: fw/TCommonDialogs.cpp:463
+#: fw/TCommonDialogs.cpp:478
 #, c-format
 msgid "Replace existing file %s?"
 msgstr "¿Reemplazar archivo existente %s?"
 
-#: fw/TCommonDialogs.cpp:464
+#: fw/TCommonDialogs.cpp:479
 msgid "Replace File?"
 msgstr "¿Reemplazar archivo?"
 
-#: fw/TCommonDialogs.cpp:628
+#: fw/TCommonDialogs.cpp:643
 #, c-format
 msgid "Do you want to save your changes to file \"%s\" before closing?"
 msgstr "¿Quieres guardar los cambios al archivo \"%s\" antes de cerrar?"
 
-#: fw/TCommonDialogs.cpp:630
+#: fw/TCommonDialogs.cpp:645
 msgid "Save Changes?"
 msgstr "¿Guardar los cambios?"
 
-#: fw/TCommonDialogs.cpp:630 ide/TLogDocument.cpp:66
-#: ide/TProjectDocument.cpp:84 ide/TTextDocument.cpp:75
+#: fw/TCommonDialogs.cpp:645 ide/TLogDocument.cpp:66
+#: ide/TProjectDocument.cpp:84 ide/TTextDocument.cpp:76
 msgid "Save"
 msgstr "Guardar"
 
-#: fw/TCommonDialogs.cpp:630
+#: fw/TCommonDialogs.cpp:645
 msgid "Don't Save"
 msgstr "No guardar"
 
@@ -125,11 +126,11 @@ msgid "File Modified"
 msgstr "Archivo modificado"
 
 #: fw/TDrawContext.cpp:381
-msgid "-adobe-helvetica-*-r-*-*-*-120-*-*-*-*-*-*"
+msgid "-*-*-bold-r-normal-*-13-*-*-*-*-*-*-*"
 msgstr ""
 
-#: fw/TMenuBar.cpp:52
-msgid "-adobe-helvetica-medium-r-normal--*-120-*-*-*-*-iso8859-1"
+#: fw/TMenuBar.cpp:53
+msgid "-*-*-medium-r-normal-*-14-*-*-*-*-*-iso8859-1"
 msgstr ""
 
 #: fw/TMenuItem.cpp:67
@@ -181,14 +182,14 @@ msgid "Whole Word"
 msgstr "Palabra comp."
 
 #: fw/TTextListView.cpp:56
-msgid "-adobe-helvetica-medium-r-*-*-*-120-*-*-*-*-*-*"
+msgid "-*-*-medium-r-normal-*-13-*-*-*-*-*-*-*"
 msgstr ""
 
-#: fw/TTextView.cpp:2036
+#: fw/TTextView.cpp:2081
 msgid "Line Number:"
 msgstr "Numero de línea:"
 
-#: fw/TTextView.cpp:2036
+#: fw/TTextView.cpp:2081
 msgid "Goto Line"
 msgstr "Ir a línea"
 
@@ -323,27 +324,27 @@ msgid "weblint found no errors\n"
 msgstr ""
 
 #: ide/TIDEApplication.cpp:80 ide/TLogDocument.cpp:59
-#: ide/TProjectDocument.cpp:77 ide/TTextDocument.cpp:68
+#: ide/TProjectDocument.cpp:77 ide/TTextDocument.cpp:69
 msgid "New"
 msgstr "Nuevo"
 
 #: ide/TIDEApplication.cpp:81 ide/TLogDocument.cpp:60
-#: ide/TProjectDocument.cpp:78 ide/TTextDocument.cpp:69
+#: ide/TProjectDocument.cpp:78 ide/TTextDocument.cpp:70
 msgid "New Project"
 msgstr "Nuevo proyecto"
 
 #: ide/TIDEApplication.cpp:83 ide/TLogDocument.cpp:62
-#: ide/TProjectDocument.cpp:80 ide/TTextDocument.cpp:71
+#: ide/TProjectDocument.cpp:80 ide/TTextDocument.cpp:72
 msgid "Open..."
 msgstr "Abrir..."
 
 #: ide/TIDEApplication.cpp:84 ide/TLogDocument.cpp:63
-#: ide/TProjectDocument.cpp:81 ide/TTextDocument.cpp:72
+#: ide/TProjectDocument.cpp:81 ide/TTextDocument.cpp:73
 msgid "Find File..."
 msgstr "Buscar archivo..."
 
 #: ide/TIDEApplication.cpp:86 ide/TLogDocument.cpp:76
-#: ide/TProjectDocument.cpp:91 ide/TTextDocument.cpp:87
+#: ide/TProjectDocument.cpp:91 ide/TTextDocument.cpp:88
 msgid "Close"
 msgstr "Cerrar"
 
@@ -352,152 +353,157 @@ msgid "Close All Variable Windows"
 msgstr "Cerrar todas las ventanas variables"
 
 #: ide/TIDEApplication.cpp:88 ide/TLogDocument.cpp:77
-#: ide/TProjectDocument.cpp:93 ide/TTextDocument.cpp:89
+#: ide/TProjectDocument.cpp:93 ide/TTextDocument.cpp:90
 msgid "Quit"
 msgstr "Quitar"
 
 #: ide/TIDEApplication.cpp:94 ide/TProjectDocument.cpp:99
-#: ide/TTextDocument.cpp:95
+#: ide/TTextDocument.cpp:96
 msgid "Undo"
 msgstr "Deshacer"
 
 #: ide/TIDEApplication.cpp:95 ide/TProjectDocument.cpp:100
-#: ide/TTextDocument.cpp:96
+#: ide/TTextDocument.cpp:97
 msgid "Redo"
 msgstr "Rehacer"
 
 #: ide/TIDEApplication.cpp:97 ide/TProjectDocument.cpp:102
-#: ide/TTextDocument.cpp:98
+#: ide/TTextDocument.cpp:99
 msgid "Cut"
 msgstr "Cortar"
 
 #: ide/TIDEApplication.cpp:98 ide/TLogDocument.cpp:83
-#: ide/TProjectDocument.cpp:103 ide/TTextDocument.cpp:99
+#: ide/TProjectDocument.cpp:103 ide/TTextDocument.cpp:100
 msgid "Copy"
 msgstr "Copiar"
 
 #: ide/TIDEApplication.cpp:99 ide/TProjectDocument.cpp:104
-#: ide/TTextDocument.cpp:100
+#: ide/TTextDocument.cpp:101
 msgid "Paste"
 msgstr "Pegar"
 
 #: ide/TIDEApplication.cpp:100 ide/TProjectDocument.cpp:105
-#: ide/TTextDocument.cpp:101
+#: ide/TTextDocument.cpp:102
 msgid "Clear"
 msgstr "Borrar"
 
 #: ide/TIDEApplication.cpp:102 ide/TLogDocument.cpp:84
-#: ide/TTextDocument.cpp:103
+#: ide/TTextDocument.cpp:104
 msgid "Select All"
 msgstr "Seleccionar todo"
 
 #: ide/TIDEApplication.cpp:108 ide/TLogDocument.cpp:110
-#: ide/TProjectDocument.cpp:121 ide/TTextDocument.cpp:137
+#: ide/TProjectDocument.cpp:121 ide/TTextDocument.cpp:138
 msgid "About Zoinks..."
 msgstr "Acerca de Zoinks..."
 
-#: ide/TIDEApplication.cpp:304
+#: ide/TIDEApplication.cpp:315
 msgid "About Zoinks"
 msgstr "Acerca de Zoinks"
 
-#: ide/TIDEApplication.cpp:306
+#: ide/TIDEApplication.cpp:317
 msgid "Zoinks "
 msgstr ""
 
-#: ide/TIDEApplication.cpp:308
-msgid " (c) 2001-2007 Mike Lockwood."
+#: ide/TIDEApplication.cpp:319
+msgid " (c) 2001-2016 Mike Voydanoff."
 msgstr ""
 
-#: ide/TIDEApplication.cpp:312
+#: ide/TIDEApplication.cpp:323
 msgid "All Rights Reserved."
 msgstr ""
 
-#: ide/TIDEApplication.cpp:314
-msgid "http://zoinks.mikelockwood.com"
+#: ide/TIDEApplication.cpp:325
+msgid "https://github.com/mikevoydanoff/zoinks"
 msgstr ""
 
-#: ide/TIDEApplication.cpp:316
+#: ide/TIDEApplication.cpp:327
 msgid "Zoinks is released under the GNU General Public License."
 msgstr ""
 
-#: ide/TIDEApplication.cpp:318
+#: ide/TIDEApplication.cpp:329
 msgid "See \"COPYING\" for details."
 msgstr ""
 
-#: ide/TIDEApplication.cpp:364
+#: ide/TIDEApplication.cpp:375
 msgid "Show man page for:"
 msgstr "Ver página de manual de:"
 
-#: ide/TIDEApplication.cpp:364
+#: ide/TIDEApplication.cpp:375
 msgid "Show Man Page"
 msgstr "Ver página de manual"
 
-#: ide/TIDEApplication.cpp:437
+#: ide/TIDEApplication.cpp:468
 msgid "No man page for "
 msgstr "No hay página de manual para "
 
-#: ide/TIDEApplication.cpp:545 ide/TLogDocument.cpp:219
-#: ide/TProjectDocument.cpp:340 ide/TTextDocument.cpp:318
+#: ide/TIDEApplication.cpp:590 ide/TLogDocument.cpp:219
+#: ide/TProjectDocument.cpp:340 ide/TTextDocument.cpp:319
 msgid "File"
 msgstr "Archivo"
 
-#: ide/TIDEApplication.cpp:546 ide/TLogDocument.cpp:220
-#: ide/TProjectDocument.cpp:341 ide/TTextDocument.cpp:319
+#: ide/TIDEApplication.cpp:591 ide/TLogDocument.cpp:220
+#: ide/TProjectDocument.cpp:341 ide/TTextDocument.cpp:320
 msgid "Edit"
 msgstr "Editar"
 
-#: ide/TIDEApplication.cpp:547 ide/TLogDocument.cpp:223
-#: ide/TProjectDocument.cpp:343 ide/TTextDocument.cpp:322
+#: ide/TIDEApplication.cpp:592 ide/TLogDocument.cpp:223
+#: ide/TProjectDocument.cpp:343 ide/TTextDocument.cpp:323
 msgid "Windows"
 msgstr "Ventanas"
 
-#: ide/TLineNumberBehavior.cpp:72
+#: ide/TLineNumberBehavior.cpp:73
+#, fuzzy, c-format
+msgid "Line %ld:%ld"
+msgstr "Línea %ld"
+
+#: ide/TLineNumberBehavior.cpp:75
 #, c-format
 msgid "Line %ld"
 msgstr "Línea %ld"
 
-#: ide/TLogDocument.cpp:51 ide/TTextDocument.cpp:60
+#: ide/TLogDocument.cpp:51 ide/TTextDocument.cpp:61
 msgid "Unix"
 msgstr ""
 
-#: ide/TLogDocument.cpp:52 ide/TTextDocument.cpp:61
+#: ide/TLogDocument.cpp:52 ide/TTextDocument.cpp:62
 msgid "Mac"
 msgstr ""
 
-#: ide/TLogDocument.cpp:53 ide/TTextDocument.cpp:62
+#: ide/TLogDocument.cpp:53 ide/TTextDocument.cpp:63
 msgid "DOS"
 msgstr ""
 
 #: ide/TLogDocument.cpp:64 ide/TProjectDocument.cpp:82
-#: ide/TTextDocument.cpp:73
+#: ide/TTextDocument.cpp:74
 msgid "Find Selection"
 msgstr "Buscar en la selección"
 
 #: ide/TLogDocument.cpp:67 ide/TProjectDocument.cpp:85
-#: ide/TTextDocument.cpp:76
+#: ide/TTextDocument.cpp:77
 msgid "Save As..."
 msgstr "Guardar como..."
 
 #: ide/TLogDocument.cpp:68 ide/TProjectDocument.cpp:86
-#: ide/TTextDocument.cpp:77
+#: ide/TTextDocument.cpp:78
 msgid "Save Copy..."
 msgstr "Guardar copia..."
 
 #: ide/TLogDocument.cpp:69 ide/TProjectDocument.cpp:87
-#: ide/TTextDocument.cpp:78
+#: ide/TTextDocument.cpp:79
 msgid "Save All"
 msgstr "Guardar todo"
 
-#: ide/TLogDocument.cpp:71 ide/TTextDocument.cpp:80
+#: ide/TLogDocument.cpp:71 ide/TTextDocument.cpp:81
 msgid "File Format"
 msgstr "Formato de archivo"
 
-#: ide/TLogDocument.cpp:72 ide/TTextDocument.cpp:81
+#: ide/TLogDocument.cpp:72 ide/TTextDocument.cpp:82
 msgid "Wrap Lines"
 msgstr "Ajuste de línea"
 
 #: ide/TLogDocument.cpp:74 ide/TProjectDocument.cpp:89
-#: ide/TTextDocument.cpp:85
+#: ide/TTextDocument.cpp:86
 msgid "Compare Files..."
 msgstr "Comparar archivos..."
 
@@ -505,52 +511,52 @@ msgstr "Comparar archivos..."
 msgid "Find..."
 msgstr "Buscar..."
 
-#: ide/TLogDocument.cpp:91 ide/TTextDocument.cpp:113
+#: ide/TLogDocument.cpp:91 ide/TTextDocument.cpp:114
 msgid "Find Previous"
 msgstr "Buscar anterior"
 
-#: ide/TLogDocument.cpp:92 ide/TTextDocument.cpp:114
+#: ide/TLogDocument.cpp:92 ide/TTextDocument.cpp:115
 msgid "Find Next"
 msgstr "Buscar siguiente"
 
-#: ide/TLogDocument.cpp:93 ide/TTextDocument.cpp:115
+#: ide/TLogDocument.cpp:93 ide/TTextDocument.cpp:116
 msgid "Find Selection Previous"
 msgstr "Buscar selección anterior"
 
-#: ide/TLogDocument.cpp:94 ide/TTextDocument.cpp:116
+#: ide/TLogDocument.cpp:94 ide/TTextDocument.cpp:117
 msgid "Find Selection Next"
 msgstr "Buscar selección siguiente"
 
 #: ide/TLogDocument.cpp:100 ide/TProjectDocument.cpp:111
-#: ide/TTextDocument.cpp:127
+#: ide/TTextDocument.cpp:128
 msgid "Make"
 msgstr ""
 
 #: ide/TLogDocument.cpp:101 ide/TProjectDocument.cpp:112
-#: ide/TTextDocument.cpp:128
+#: ide/TTextDocument.cpp:129
 msgid "Stop Make"
 msgstr "Parar Make"
 
 #: ide/TLogDocument.cpp:102 ide/TProjectDocument.cpp:113
-#: ide/TTextDocument.cpp:129
+#: ide/TTextDocument.cpp:130
 msgid "Debug"
 msgstr ""
 
 #: ide/TLogDocument.cpp:104 ide/TProjectDocument.cpp:115
-#: ide/TTextDocument.cpp:131
+#: ide/TTextDocument.cpp:132
 msgid "Show Man Page..."
 msgstr "Mostrar página de manual..."
 
-#: ide/TLogDocument.cpp:221 ide/TTextDocument.cpp:320
+#: ide/TLogDocument.cpp:221 ide/TTextDocument.cpp:321
 msgid "Search"
 msgstr "Buscar"
 
 #: ide/TLogDocument.cpp:222 ide/TProjectDocument.cpp:342
-#: ide/TTextDocument.cpp:321
+#: ide/TTextDocument.cpp:322
 msgid "Project"
 msgstr "Proyecto"
 
-#: ide/TProjectDocument.cpp:92 ide/TTextDocument.cpp:88
+#: ide/TProjectDocument.cpp:92 ide/TTextDocument.cpp:89
 msgid "Close All Text Windows"
 msgstr "Cerrar todas las ventanas de texto"
 
@@ -615,246 +621,246 @@ msgid ""
 "Build Failed.  Elapsed time: "
 msgstr ""
 
-#: ide/TTextDocument.cpp:82
+#: ide/TTextDocument.cpp:83
 msgid "Show HTML Menu"
 msgstr "Mostrar menú HTML"
 
-#: ide/TTextDocument.cpp:104
+#: ide/TTextDocument.cpp:105
 msgid "Shift Left"
 msgstr "Sangrado izquierdo"
 
-#: ide/TTextDocument.cpp:105
+#: ide/TTextDocument.cpp:106
 msgid "Shift Right"
 msgstr "Sangrado derecho"
 
-#: ide/TTextDocument.cpp:106
+#: ide/TTextDocument.cpp:107
 msgid "Balance Selection"
 msgstr ""
 
-#: ide/TTextDocument.cpp:112
+#: ide/TTextDocument.cpp:113
 msgid "Find and Replace..."
 msgstr "Buscar y reemplazar"
 
-#: ide/TTextDocument.cpp:118
+#: ide/TTextDocument.cpp:119
 msgid "Replace and Find Previous"
 msgstr "Reemplazar y buscar anterior"
 
-#: ide/TTextDocument.cpp:119
+#: ide/TTextDocument.cpp:120
 msgid "Replace and Find Next"
 msgstr "Reemplazar y buscar siguiente"
 
-#: ide/TTextDocument.cpp:121
+#: ide/TTextDocument.cpp:122
 msgid "Goto Line..."
 msgstr "Ir a línea..."
 
-#: ide/TTextDocument.cpp:144
+#: ide/TTextDocument.cpp:145
 msgid "Heading 1"
 msgstr "Encabezado 1"
 
-#: ide/TTextDocument.cpp:145
+#: ide/TTextDocument.cpp:146
 msgid "Heading 2"
 msgstr "Encabezado 2"
 
-#: ide/TTextDocument.cpp:146
+#: ide/TTextDocument.cpp:147
 msgid "Heading 3"
 msgstr "Encabezado 3"
 
-#: ide/TTextDocument.cpp:147
+#: ide/TTextDocument.cpp:148
 msgid "Heading 4"
 msgstr "Encabezado 4"
 
-#: ide/TTextDocument.cpp:148
+#: ide/TTextDocument.cpp:149
 msgid "Heading 5"
 msgstr "Encabezado 5"
 
-#: ide/TTextDocument.cpp:149
+#: ide/TTextDocument.cpp:150
 msgid "Heading 6"
 msgstr "Encabezado 6"
 
-#: ide/TTextDocument.cpp:155
+#: ide/TTextDocument.cpp:156
 msgid "Table"
 msgstr "Tabla"
 
-#: ide/TTextDocument.cpp:156
+#: ide/TTextDocument.cpp:157
 msgid "Table Row"
 msgstr "Línea de tabla"
 
-#: ide/TTextDocument.cpp:157
+#: ide/TTextDocument.cpp:158
 msgid "Table Cell"
 msgstr "Celda de tabla"
 
-#: ide/TTextDocument.cpp:158
+#: ide/TTextDocument.cpp:159
 msgid "Table Header"
 msgstr "Encabezado de tabla"
 
-#: ide/TTextDocument.cpp:159
+#: ide/TTextDocument.cpp:160
 msgid "Caption"
 msgstr "Descripción"
 
-#: ide/TTextDocument.cpp:165
+#: ide/TTextDocument.cpp:166
 msgid "Ordered List"
 msgstr "Lista ordenada"
 
-#: ide/TTextDocument.cpp:166
+#: ide/TTextDocument.cpp:167
 msgid "Unordered List"
 msgstr "Lista desordenada"
 
-#: ide/TTextDocument.cpp:167
+#: ide/TTextDocument.cpp:168
 msgid "List Item"
 msgstr "Item de lista"
 
-#: ide/TTextDocument.cpp:168
+#: ide/TTextDocument.cpp:169
 msgid "Definition List"
 msgstr "Definición de lista"
 
-#: ide/TTextDocument.cpp:169
+#: ide/TTextDocument.cpp:170
 msgid "Term"
 msgstr "Término"
 
-#: ide/TTextDocument.cpp:170 ide/TTextDocument.cpp:206
+#: ide/TTextDocument.cpp:171 ide/TTextDocument.cpp:207
 msgid "Definition"
 msgstr "Definición"
 
-#: ide/TTextDocument.cpp:176
+#: ide/TTextDocument.cpp:177
 msgid "New HTML Document"
 msgstr "Nuevo documento HTML"
 
-#: ide/TTextDocument.cpp:177
+#: ide/TTextDocument.cpp:178
 msgid "Anchor"
 msgstr "Ancla"
 
-#: ide/TTextDocument.cpp:178
+#: ide/TTextDocument.cpp:179
 msgid "Paragraph"
 msgstr "Parrafo"
 
-#: ide/TTextDocument.cpp:179
+#: ide/TTextDocument.cpp:180
 msgid "Div"
 msgstr ""
 
-#: ide/TTextDocument.cpp:180
+#: ide/TTextDocument.cpp:181
 msgid "Line Break"
 msgstr "Final de línea"
 
-#: ide/TTextDocument.cpp:181
+#: ide/TTextDocument.cpp:182
 msgid "Horizontal Rule"
 msgstr "Línea horizontal"
 
-#: ide/TTextDocument.cpp:182
+#: ide/TTextDocument.cpp:183
 msgid "Align Center"
 msgstr "Alineado central"
 
-#: ide/TTextDocument.cpp:183
+#: ide/TTextDocument.cpp:184
 msgid "Align Right"
 msgstr "Alineado derecho"
 
-#: ide/TTextDocument.cpp:184
+#: ide/TTextDocument.cpp:185
 msgid "Block Quote"
 msgstr ""
 
-#: ide/TTextDocument.cpp:185
+#: ide/TTextDocument.cpp:186
 msgid "Comment"
 msgstr "Comentario"
 
-#: ide/TTextDocument.cpp:187
+#: ide/TTextDocument.cpp:188
 msgid "Bold"
 msgstr "Negrita"
 
-#: ide/TTextDocument.cpp:188
+#: ide/TTextDocument.cpp:189
 msgid "Italic"
 msgstr "Cursiva"
 
-#: ide/TTextDocument.cpp:190
+#: ide/TTextDocument.cpp:191
 msgid "Headings"
 msgstr "Encabezados"
 
-#: ide/TTextDocument.cpp:191
+#: ide/TTextDocument.cpp:192
 msgid "Tables"
 msgstr "Tablas"
 
-#: ide/TTextDocument.cpp:192
+#: ide/TTextDocument.cpp:193
 msgid "Lists"
 msgstr "Listas"
 
-#: ide/TTextDocument.cpp:194
+#: ide/TTextDocument.cpp:195
 msgid "Fix Special Characters"
 msgstr "Arreglar carácteres especiales"
 
-#: ide/TTextDocument.cpp:195
+#: ide/TTextDocument.cpp:196
 msgid "Insert Image"
 msgstr "Insertar imagen"
 
-#: ide/TTextDocument.cpp:197
+#: ide/TTextDocument.cpp:198
 msgid "Insert Thumbnail"
 msgstr "Insertar miniatura"
 
-#: ide/TTextDocument.cpp:199
+#: ide/TTextDocument.cpp:200
 msgid "Web Lint"
 msgstr ""
 
-#: ide/TTextDocument.cpp:205
+#: ide/TTextDocument.cpp:206
 msgid "New TeX Document"
 msgstr "Nuevo documento TeX"
 
-#: ide/TTextDocument.cpp:207
+#: ide/TTextDocument.cpp:208
 msgid "Lemma"
 msgstr ""
 
-#: ide/TTextDocument.cpp:208
+#: ide/TTextDocument.cpp:209
 msgid "Theorem"
 msgstr ""
 
-#: ide/TTextDocument.cpp:209
+#: ide/TTextDocument.cpp:210
 msgid "Proof"
 msgstr ""
 
-#: ide/TTextDocument.cpp:210
+#: ide/TTextDocument.cpp:211
 msgid "Corollary"
 msgstr ""
 
-#: ide/TTextDocument.cpp:212
+#: ide/TTextDocument.cpp:213
 msgid "Math"
 msgstr ""
 
-#: ide/TTextDocument.cpp:213
+#: ide/TTextDocument.cpp:214
 msgid "Emphasis"
 msgstr ""
 
-#: ide/TTextDocument.cpp:215
+#: ide/TTextDocument.cpp:216
 msgid "For All"
 msgstr ""
 
-#: ide/TTextDocument.cpp:216
+#: ide/TTextDocument.cpp:217
 msgid "Exists"
 msgstr ""
 
-#: ide/TTextDocument.cpp:217
+#: ide/TTextDocument.cpp:218
 msgid "Element of"
 msgstr ""
 
-#: ide/TTextDocument.cpp:218
+#: ide/TTextDocument.cpp:219
 msgid "Center Dot"
 msgstr ""
 
-#: ide/TTextDocument.cpp:220
+#: ide/TTextDocument.cpp:221
 msgid "Generate DVI"
 msgstr "Generar DVI"
 
-#: ide/TTextDocument.cpp:221
+#: ide/TTextDocument.cpp:222
 msgid "View in xdvi"
 msgstr "Ver en xdvi"
 
-#: ide/TTextDocument.cpp:222
+#: ide/TTextDocument.cpp:223
 msgid "Generate PDF"
 msgstr "Generar PDF"
 
-#: ide/TTextDocument.cpp:585
+#: ide/TTextDocument.cpp:598
 msgid "Functions"
 msgstr "Funciones"
 
-#: ide/TTextDocument.cpp:608
+#: ide/TTextDocument.cpp:621
 msgid "HTML"
 msgstr ""
 
-#: ide/TTextDocument.cpp:630
+#: ide/TTextDocument.cpp:643
 msgid "TeX"
 msgstr ""

@@ -1,11 +1,11 @@
-Zoinks is Copyright (c) 2001-2008 by Mike Lockwood
+Zoinks is Copyright (c) 2001-2016 by Mike Voydanoff
 All rights reserved.
 
 
 Zoinks is a text editor and IDE for Unix/X11 platforms.  There is also an integrated source level debugger
 under development (not included in this distribution).  Zoinks also has some support for HTML editing.
 
-For more information, or to download the latest version of Zoinks, see the Zoinks web site at http://zoinks.mikelockwood.com.
+For more information, or to download the latest version of Zoinks, see https://github.com/mikevoydanoff/zoinks.
 See the ChangeLog file for the latest changes.
 
 
@@ -39,6 +39,6 @@ Optionally:
 will install zoinks as /usr/local/bin/zoinks (unless you pass a different --prefix option to configure).
 
 
-Mike Lockwood
-mike@mikelockwood.com
-http://zoinks.mikelockwood.com
+Mike Voydanoff
+mikevoydanoff@gmail.com
+https://github.com/mikevoydanoff/zoinks
