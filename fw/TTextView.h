@@ -67,7 +67,7 @@ public:
 								TTextView(TWindow* parent, const TRect& bounds, TFont* font, bool modifiable = true, bool multiLine = true);
 
 	virtual void				Create();
-	virtual TFont*				GetFont();
+	virtual TFont*				GetFont() const;
 
 	inline const TChar*			GetText() const { return fLayout->GetText(); }
 	inline TTextLayout*			GetTextLayout() const { return fLayout; }

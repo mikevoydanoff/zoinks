@@ -308,7 +308,7 @@ void TWindow::SetBackColor(TColor& color)
 }
 
 
-TFont* TWindow::GetFont()
+TFont* TWindow::GetFont() const
 {
 	return NULL;
 }				

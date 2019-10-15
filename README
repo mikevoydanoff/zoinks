@@ -30,6 +30,9 @@ To build zoinks, do the usual:
 	./configure
 	make
 
+When building for XQuartz, use:
+	 ./configure --x-includes=/opt/X11/include --x-libraries=/opt/X11/lib
+
 The program will be built as ide/zoinks
 
 Optionally:
@@ -40,5 +43,5 @@ will install zoinks as /usr/local/bin/zoinks (unless you pass a different --pref
 
 
 Mike Voydanoff
-mikevoydanoff@gmail.com
+mike@voydanoff.net
 https://github.com/mikevoydanoff/zoinks

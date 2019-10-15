@@ -47,6 +47,9 @@ TMenuOwner::~TMenuOwner()
 		fFont->RemoveRef();
 }
 
+TFont* TMenuOwner::GetFont() const {
+	return fFont;
+}
 
 void TMenuOwner::SetFont(TFont* font)
 {

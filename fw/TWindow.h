@@ -75,7 +75,7 @@ public:
 	inline TColor&				GetBackColor() { return fBackColor; }					
 	void						SetBackColor(TColor& color);					
 	
-	virtual TFont*				GetFont();
+	virtual TFont*				GetFont() const;
 
 	void						Redraw();
 	virtual void				RedrawRect(const TRect& r);

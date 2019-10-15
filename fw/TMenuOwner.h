@@ -36,7 +36,7 @@ public:
 						TMenuOwner(TWindow* parent, const TRect& bounds, TWindowStyle style);
 	virtual 			~TMenuOwner();
 
-	inline TFont*		GetFont() const { return fFont; }
+	virtual TFont*		GetFont() const;
 	void				SetFont(TFont* font);
 
 	virtual void		MenuItemSelected(TMenu* menu, int itemIndex, Time time) = 0;

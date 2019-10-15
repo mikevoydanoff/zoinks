@@ -132,7 +132,7 @@ void TTextView::Create()
 }
 
 
-TFont* TTextView::GetFont()
+TFont* TTextView::GetFont() const
 {
 	return fFont;
 }
