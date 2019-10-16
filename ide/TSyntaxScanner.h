@@ -25,9 +25,12 @@
 
 extern const char* kCKeywords[];
 extern const char* kCPlusPlusKeywords[];
+extern const char* kObjCKeywords[];
+extern const char* kObjCPlusPlusKeywords[];
 extern const char* kJavaKeywords[];
 extern const char* kRubyKeywords[];
 extern const char* kPythonKeywords[];
+extern const char* kSwiftKeywords[];
 
 class TSyntaxScanner
 {

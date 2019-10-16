@@ -378,7 +378,9 @@ void TTextDocument::SetTitle(const TChar* title)
 	
 	ELanguage language = GetFileLanguage(extension);
 
-	if (language == kLanguageC || language == kLanguageCPlusPlus || language == kLanguageJava)
+	if (language == kLanguageC || language == kLanguageCPlusPlus ||
+		language == kLanguageObjC || language == kLanguageObjCPlusPlus ||
+		language == kLanguageJava || language == kLanguageSwift)
 		AddFunctionsMenu();
 	else
 		RemoveFunctionsMenu();
@@ -488,7 +490,7 @@ bool TTextDocument::DoCommand(TCommandHandler* sender, TCommandHandler* receiver
 
 
 static const char* kHeaderExtensions[] = { "h", "H", "hpp", "HPP", NULL };
-static const char* kSourceExtensions[] = { "c", "C", "cc", "cp", "cpp", "cc", NULL };
+static const char* kSourceExtensions[] = { "c", "C", "cc", "cp", "cpp", "cc", "m", "mm", NULL };
 
 bool TTextDocument::DoKeyDown(KeySym key, TModifierState state, const char* string)
 {

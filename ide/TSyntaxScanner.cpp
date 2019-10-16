@@ -27,110 +27,169 @@
 
 #include <ctype.h>
 
+#define C_KEYWORDS			\
+	"asm",					\
+	"auto",					\
+	"break",				\
+	"case",					\
+	"char",					\
+	"const",				\
+	"continue",				\
+	"default",				\
+	"do",					\
+	"double",				\
+	"else",					\
+	"enum",					\
+	"extern",				\
+	"float",				\
+	"for",					\
+	"goto",					\
+	"if",					\
+	"int",					\
+	"long",					\
+	"register",				\
+	"return",				\
+	"short",				\
+	"signed",				\
+	"sizeof",				\
+	"static",				\
+	"struct",				\
+	"switch",				\
+	"typedef",				\
+	"union",				\
+	"unsigned",				\
+	"void",					\
+	"volatile",				\
+	"while"
+
+
+#define CPLUSPLUS_KEYWORDS 	\
+	"alignas",				\
+	"alignof",				\
+	"and",					\
+	"and_eq"				\
+	"atomic_cancel",		\
+	"atomic_commit",		\
+	"atomic_noexcept",		\
+	"bitand",				\
+	"bitor",				\
+	"bool",					\
+	"catch",				\
+	"char8_t",				\
+	"char16_t",				\
+	"char32_t",				\
+	"class",				\
+	"compl",				\
+	"concept",				\
+	"consteval",			\
+	"constexpr",			\
+	"constinit",			\
+	"const_cast",			\
+	"co_wait",				\
+	"co_return",			\
+	"co_yield",				\
+	"decltype",				\
+	"delete",				\
+	"dynamic_cast",			\
+	"explicit",				\
+	"export",				\
+	"false",				\
+	"friend",				\
+	"inline",				\
+	"mutable",				\
+	"namespace",			\
+	"new",					\
+	"noexcept",				\
+	"not",					\
+	"not_eq",				\
+	"nullptr",				\
+	"operator",				\
+	"or",					\
+	"or_eq",				\
+	"private",				\
+	"protected",			\
+	"public",				\
+	"reinterpret_cast",		\
+	"static_cast",			\
+	"synchronized",			\
+	"template",				\
+	"this",					\
+	"thread_local",			\
+	"throw",				\
+	"true",					\
+	"try",					\
+	"typeid",				\
+	"typename",				\
+	"using",				\
+	"virtual",				\
+	"volatile",				\
+	"wchar_t",				\
+	"xor",					\
+	"xor_eq"
+
+#define OBJC_KEYWORDS 		\
+	"@interface",			\
+	"@implementation",		\
+	"@protocol",			\
+	"@end",					\
+	"@private",				\
+	"@protected",			\
+	"@public",				\
+	"@try",					\
+	"@throw",				\
+	"@catch",				\
+	"@finally",				\
+	"@class",				\
+	"@selector",			\
+	"@protocol",			\
+	"@encode",				\
+	"@string",				\
+	"@string1",				\
+	"@string2",				\
+	"@string3",				\
+	"@string4",				\
+	"@string5",				\
+	"@string6",				\
+	"@string7",				\
+	"@string8",				\
+	"@string9",				\
+	"@synchronized",		\
+	"byref",				\
+	"oneway",				\
+	"alloc",				\
+	"retain",				\
+	"release",				\
+	"autorelease",			\
+	"YES",					\
+	"NO",					\
+	"super",				\
+	"self"
 
 const char* kCKeywords[] =
 {
-	"asm",
-	"auto",
-	"break",
-	"case",
-	"char",
-	"const",
-	"continue",
-	"default",
-	"do",
-	"double",
-	"else",
-	"enum",
-	"extern",
-	"float",
-	"for",
-	"goto",
-	"if",
-	"int",
-	"long",
-	"register",
-	"return",
-	"short",
-	"signed",
-	"sizeof",
-	"static",
-	"struct",
-	"switch",
-	"typedef",
-	"union",
-	"unsigned",
-	"void",
-	"volatile",
-	"while",
+	C_KEYWORDS,
 	""
 };
 
 const char* kCPlusPlusKeywords[] =
 {
-	"asm",
-	"auto",
-	"bool",
-	"break",
-	"case",
-	"catch",
-	"char",
-	"class",
-	"const",
-	"const_cast",
-	"continue",
-	"default",
-	"delete",
-	"do",
-	"double",
-	"dynamic_cast",
-	"else",
-	"enum",
-	"explicit",
-	"export",
-	"extern",
-	"false",
-	"float",
-	"for",
-	"friend",
-	"goto",
-	"if",
-	"inline",
-	"int",
-	"long",
-	"mutable",
-	"namespace",
-	"new",
-	"operator",
-	"private",
-	"protected",
-	"public",
-	"reinterpret_cast",
-	"register",
-	"return",
-	"short",
-	"signed",
-	"sizeof",
-	"static",
-	"static_cast",
-	"struct",
-	"switch",
-	"template",
-	"this",
-	"throw",
-	"true",
-	"typeid",
-	"typename",
-	"try",
-	"typedef",
-	"union",
-	"unsigned",
-	"using",
-	"virtual",
-	"void",
-	"volatile",
-	"wchar_t",
-	"while",
+	C_KEYWORDS,
+	CPLUSPLUS_KEYWORDS,
+	""
+};
+
+const char* kObjCKeywords[] =
+{
+	C_KEYWORDS,
+	OBJC_KEYWORDS,
+	""
+};
+
+const char* kObjCPlusPlusKeywords[] =
+{
+	C_KEYWORDS,
+	CPLUSPLUS_KEYWORDS,
+	OBJC_KEYWORDS,
 	""
 };
 
@@ -264,13 +323,112 @@ const char* kPythonKeywords[] =
 	"with",
 	"yield",
 	""
-};	
+};
+
+const char* kSwiftKeywords[] =
+{
+	"associatedtype",
+	"class",
+	"deinit",
+	"enum",
+	"extension",
+	"fileprivate",
+	"func",
+	"import",
+	"init",
+	"inout",
+	"internal",
+	"let",
+	"open",
+	"operator",
+	"private",
+	"protocol",
+	"public",
+	"rethrows",
+	"static",
+	"struct",
+	"subscript",
+	"typealias",
+	"var",
+	"break",
+	"case",
+	"continue",
+	"default",
+	"defer",
+	"do",
+	"else",
+	"fallthrough",
+	"for",
+	"guard",
+	"if",
+	"in",
+	"repeat",
+	"return",
+	"switch",
+	"where",
+	"while",
+	"as",
+	"Any",
+	"catch",
+	"false",
+	"is",
+	"nil",
+	"super",
+	"self",
+	"Self",
+	"throw",
+	"throws",
+	"true",
+	"try",
+	"_",
+	"#available",
+	"#colorLiteral",
+	"#column",
+	"#else",
+	"#elseif",
+	"#endif",
+	"#error",
+	"#file",
+	"#fileLiteral",
+	"#function",
+	"#if",
+	"#imageLiteral",
+	"#line",
+	"#selector",
+	"#sourceLocation",
+	"#warning",
+	"associativity",
+	"convenience",
+	"dynamic",
+	"didSet",
+	"final",
+	"get",
+	"infix",
+	"indirect",
+	"lazy",
+	"left",
+	"mutating",
+	"none",
+	"nonmutating",
+	"optional",
+	"override",
+	"postfix",
+	"precedence",
+	"prefix",
+	"Protocol",
+	"required",
+	"right",
+	"set",
+	"Type",
+	"unowned",
+	"weak",
+	"willSet",
+};
 
 inline bool IsString(const TChar* text)
 {
 	return ((*text == '\'' || *text == '\"') && (text[-1] != '\\' || text[-2] == '\\'));
 }
-
 
 TSyntaxScanner::TSyntaxScanner(const TTextLayout* layout)
 	:	fLayout(layout),
@@ -283,11 +441,9 @@ TSyntaxScanner::TSyntaxScanner(const TTextLayout* layout)
 	Reset(fLanguage);
 }
 
-
 TSyntaxScanner::~TSyntaxScanner()
 {
 }
-
 
 TSyntaxScanner::TScanState TSyntaxScanner::NextSyntaxRange(STextOffset& offset, uint32& length)
 {
@@ -462,7 +618,8 @@ TSyntaxScanner::TScanState TSyntaxScanner::NextSyntaxRange(STextOffset& offset, 
 				else
 					fScanState = kPreprocessor;
 			}
-			else if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z') || ch == '_')
+			else if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z') || ch == '_' ||
+					 (ch == '@' && (fLanguage == kLanguageObjC || fLanguage == kLanguageObjCPlusPlus)))
 				fScanState = kIdentifier;
 			else if (fLanguage != kLanguageRuby && ch == '/' && (text[1] == '*' || text[1] == '/'))
 				fScanState = kComment;
@@ -660,7 +817,7 @@ void TSyntaxScanner::SkipIdentifier(const TChar*& text)
 	{
 		TChar ch = *text;
 		
-		if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z') || ch == '_' || (ch >= '0' && ch <= '9'))
+		if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z') || ch == '_' || (ch >= '0' && ch <= '9') || ch == '@')
 			NextChar(text);
 		else
 			break;

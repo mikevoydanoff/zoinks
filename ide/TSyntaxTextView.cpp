@@ -269,23 +269,27 @@ bool TSyntaxTextView::IsKeyword(const TChar* text, uint32 length)
 		case kLanguageC:
 			keyword = kCKeywords;
 			break;
-			
 		case kLanguageCPlusPlus:
 			keyword = kCPlusPlusKeywords;
 			break;
-			
+		case kLanguageObjC:
+			keyword = kObjCKeywords;
+			break;
+		case kLanguageObjCPlusPlus:
+			keyword = kObjCPlusPlusKeywords;
+			break;
 		case kLanguageJava:
 			keyword = kJavaKeywords;
 			break;
-			
 		case kLanguageRuby:
 			keyword = kRubyKeywords;
 			break;
-
 		case kLanguagePython:
 			keyword = kPythonKeywords;
 			break;
-						
+		case kLanguageSwift:
+			keyword = kPythonKeywords;
+			break;						
 		default:
 			return false;
 	}

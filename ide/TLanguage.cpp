@@ -43,6 +43,14 @@ ELanguage GetFileLanguage(const TChar* extension)
 	{
 		language = kLanguageCPlusPlus;
 	}
+	else if (Tstrcasecmp(extension, "m") == 0)
+	{
+		language = kLanguageObjC;
+	}
+	else if (Tstrcasecmp(extension, "mm") == 0)
+	{
+		language = kLanguageObjCPlusPlus;
+	}
 	else if (Tstrcasecmp(extension, "java") == 0)
 	{
 		language = kLanguageJava;
@@ -65,6 +73,10 @@ ELanguage GetFileLanguage(const TChar* extension)
 	else if (Tstrcasecmp(extension, "tex") == 0)
 	{
 		language = kLanguageTeX;
+	}
+	else if (Tstrcasecmp(extension, "swift") == 0)
+	{
+		language = kLanguageSwift;
 	}
 
 	return language;

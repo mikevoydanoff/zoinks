@@ -26,11 +26,14 @@ enum ELanguage
 	kLanguageNone,
 	kLanguageC,
 	kLanguageCPlusPlus,
+	kLanguageObjC,
+	kLanguageObjCPlusPlus,
 	kLanguageJava,
 	kLanguageHTML,
 	kLanguageRuby,
 	kLanguagePython,
-	kLanguageTeX
+	kLanguageTeX,
+	kLanguageSwift,
 };
 
 ELanguage GetFileLanguage(const TChar* extension);

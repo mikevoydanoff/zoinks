@@ -28,16 +28,6 @@ class TSettingsFile;
 class TEditorTextView : public TSyntaxTextView
 {
 public:
-	enum ELanguage
-	{
-		kLanguageNone,
-		kLanguageC,
-		kLanguageCPlusPlus,
-		kLanguageJava,
-		kLanguageHTML
-	};
-
-public:
 								TEditorTextView(TWindow* parent, const TRect& bounds, TFont* font);		
 
 	void						Create();
