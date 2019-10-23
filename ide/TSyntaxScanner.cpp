@@ -162,6 +162,7 @@
 	"autorelease",			\
 	"YES",					\
 	"NO",					\
+	"nil",					\
 	"super",				\
 	"self"
 
