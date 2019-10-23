@@ -426,7 +426,7 @@ void TIDEApplication::ShowManPage(const char* query)
 				// skip weird sequences that start with 0x1B,'['
 				src += 2;
 				dataLength -= 2;
-				
+
 				while (dataLength > 1 && *src != 'm')
 				{
 				    src++;
@@ -437,7 +437,13 @@ void TIDEApplication::ShowManPage(const char* query)
 			}
 			else if (ch == '\b')
 			{
-				// remove backspaces
+				// process backspaces
+				dest--;
+				dataLength -= 2;
+			}
+			else if (ch == '_')
+			{
+				// strip underscores
 				dataLength--;
 			}
 			else
